@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PS16_0_18_1_MH_40eV.mgf
+###	G:\20190719_LipidStdsPos\PS_MH_1-A,4_01_27237.d\analysis.baf
+###	PS_MH_1-A,4_01_27237.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PS_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PS_MH_1-A,4_01_27237.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(762.5280), 40.0eV, 13.7min #4109
+
+###FS:    #m/z: 762.52802 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(762.5280), 40.0eV, 13.7min #4109
+RTINSECONDS=0
+SCANS=
+PEPMASS=762.52802	
+95.08553	11120	
+96.08900	576	
+97.10122	5628	
+98.10474	296	
+99.08033	416	
+99.11705	814	
+106.04907	1044	
+107.05384	286	
+107.08525	768	
+109.10093	6794	
+110.10306	582	
+111.08015	462	
+111.11639	2662	
+113.13158	378	
+121.10042	2362	
+123.11578	2888	
+124.11973	402	
+125.13205	1146	
+135.11650	2288	
+137.13190	1312	
+139.14798	564	
+149.13250	1444	
+151.14860	848	
+153.12655	384	
+155.01107	852	
+163.14891	506	
+165.16468	724	
+173.02033	398	
+184.07392	376	
+221.22689	744	
+239.23693	4404	
+240.24090	576	
+247.24154	1192	
+265.25330	5890	
+266.25640	694	
+313.27328	2706	
+314.27772	576	
+321.27982	444	
+326.26913	2574	
+339.28961	2820	
+340.29480	554	
+352.28469	3478	
+353.28952	444	
+393.23861	982	
+577.51872	115814	
+577.66362	838	
+577.77635	410	
+578.11427	512	
+578.52202	31614	
+579.52508	4874	
+END IONS
+

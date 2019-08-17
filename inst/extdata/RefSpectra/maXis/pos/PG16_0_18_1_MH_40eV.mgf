@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PG16_0_18_1_MH_40eV.mgf
+###	G:\20190719_LipidStdsPos\PG_MH_1-A,5_01_27239.d\analysis.baf
+###	PG_MH_1-A,5_01_27239.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PG_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PG_MH_1-A,5_01_27239.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(749.5327), 40.0eV, 13.7min #4082
+
+###FS:    #m/z: 749.53271 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(749.5327), 40.0eV, 13.7min #4082
+RTINSECONDS=0
+SCANS=
+PEPMASS=749.53271	
+95.08554	6804	
+96.08829	192	
+97.06543	194	
+97.10078	3490	
+98.10533	130	
+99.08051	304	
+99.11738	640	
+107.08509	418	
+109.10078	3366	
+110.10454	348	
+111.07964	214	
+111.11692	1550	
+112.11901	164	
+113.09660	132	
+113.13205	408	
+121.10070	1784	
+123.11655	1788	
+125.13275	568	
+126.13422	164	
+127.10907	184	
+135.11679	1188	
+136.11927	150	
+137.13220	1246	
+139.11168	272	
+139.14901	170	
+149.13219	756	
+151.14857	638	
+153.12780	136	
+153.16200	156	
+155.00909	176	
+163.14898	336	
+165.16500	468	
+177.16405	162	
+221.22405	148	
+239.23635	2332	
+240.24080	160	
+247.24109	730	
+265.25294	3204	
+266.25803	280	
+313.27494	1280	
+314.27514	164	
+339.29020	1546	
+340.29217	366	
+449.26597	160	
+576.48923	150	
+577.51848	39968	
+577.65397	152	
+577.89381	128	
+578.52274	12420	
+579.52337	1426	
+END IONS
+

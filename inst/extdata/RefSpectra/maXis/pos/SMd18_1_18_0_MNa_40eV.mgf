@@ -1,0 +1,81 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\SMd18_1_18_0_MNa_40eV.mgf
+###	G:\20190719_LipidStdsPos\SM_MNa_1-A,7_01_27244.d\analysis.baf
+###	SM_MNa_1-A,7_01_27244.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    SM_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=SM_MNa_1-A,7_01_27244.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(753.5881), 40.0eV, 14.8min #4413
+
+###FS:    #m/z: 753.58807 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(753.5881), 40.0eV, 14.8min #4413
+RTINSECONDS=0
+SCANS=
+PEPMASS=753.58807	
+95.08498	144	
+97.07476	112	
+97.10094	148	
+104.10642	914	
+107.08575	162	
+146.98189	6284	
+147.98635	122	
+164.99165	442	
+206.05516	304	
+264.27002	220	
+265.25344	100	
+308.29297	384	
+346.01003	126	
+385.78692	128	
+530.52977	840	
+531.53422	410	
+548.53847	1440	
+549.54632	732	
+551.32816	174	
+552.50378	114	
+570.42499	124	
+570.46797	182	
+570.52145	36622	
+570.67355	122	
+570.72525	114	
+570.75986	146	
+570.84931	164	
+571.52450	9860	
+572.52814	1320	
+573.52264	112	
+650.48933	170	
+693.01555	118	
+693.76042	102	
+694.51412	31274	
+694.72733	150	
+695.08554	124	
+695.51700	9752	
+696.51989	1372	
+721.54421	110	
+722.04231	132	
+722.55139	272	
+751.07429	154	
+753.52062	118	
+753.58614	6550	
+754.59052	2504	
+755.59606	484	
+893.54859	122	
+894.53750	122	
+895.56312	134	
+END IONS
+

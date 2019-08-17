@@ -1,0 +1,67 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PG16_0_18_1_MNa_20eV.mgf
+###	G:\20190719_LipidStdsPos\PG_MNa_1-A,5_01_27240.d\analysis.baf
+###	PG_MNa_1-A,5_01_27240.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PG_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PG_MNa_1-A,5_01_27240.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(771.5147), 20.0eV, 13.6min #4073
+
+###FS:    #m/z: 771.51471 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(771.5147), 20.0eV, 13.6min #4073
+RTINSECONDS=0
+SCANS=
+PEPMASS=771.51471	
+111.10868	156	
+195.00254	2456	
+305.17753	106	
+340.29595	154	
+341.29858	156	
+514.31682	100	
+577.51832	1928	
+578.52124	7824	
+578.69807	128	
+579.52373	8530	
+580.44802	114	
+580.52714	15404	
+581.52962	3626	
+582.53354	350	
+599.49571	336	
+600.50441	164	
+706.46845	102	
+717.52413	114	
+752.53899	228	
+753.54330	100	
+769.50559	356	
+770.00422	420	
+770.51834	294	
+770.58571	118	
+771.00816	124	
+771.10494	130	
+771.51307	26140	
+771.84810	114	
+772.26617	154	
+772.51604	10488	
+772.61667	136	
+772.83464	120	
+773.51978	1090	
+774.51982	200	
+961.50032	148	
+END IONS
+

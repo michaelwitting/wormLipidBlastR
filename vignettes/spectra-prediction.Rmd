@@ -1,0 +1,38 @@
+---
+title: "Template based prediction of MS2 spectra"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{spectra-prediction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Template based prediction of lipid MS2 spectra
+
+The <code>wormLipidBlastR</code> package allows the prediction of lipid spectra from their shorthand notation and template measurements. This enables to predict a large range of MS2 spectra for different lipids based on a few template measurements. The approach is inspired by the LipidBlast library from the Fiehn laboratory [1]. <code>wormLipidBlastR</code> utilizes functions from the <code>lipidomicsUtils</code> package for parsing of shorthand notations. Therefore this packages needs to be installed first from GitHub. Furthermore, the infrastructure for handling the predicted spectra requires functions from the <code>MSnbase</code> package.
+
+```{r setup}
+# installation of lipidomicsUtils
+#devtools::install_github("michaelwitting/lipidomicsUtils")
+
+library(wormLipidBlastR)
+library(MSnbase)
+```
+
+# Prediction of spectra
+
+After installation different functions are available for prediction. Currently supported lipid clases are PCs (1,2-diacyl-PCs, LM...), PEs (1,2-diacyl-PEs, LM...) and PS (1,2-diacyl-PSs, LM...). More lipid classes will be added soon. Predictions are based on masses for different building blocks as provived by the <code>lipidomicsUtils</code> package.
+
+```{r}
+
+```
+
+
+[1] LipidBlast paper

@@ -1,0 +1,47 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\Cerd18_1_18_0_MNa_20eV.mgf
+###	G:\20190719_LipidStdsPos\Cer_MNa_1-A,6_01_27242.d\analysis.baf
+###	Cer_MNa_1-A,6_01_27242.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    Cer_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=Cer_MNa_1-A,6_01_27242.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(588.5326), 20.0eV, 16.0min #4776
+
+###FS:    #m/z: 588.53259 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(588.5326), 20.0eV, 16.0min #4776
+RTINSECONDS=0
+SCANS=
+PEPMASS=588.53259	
+588.36290	128	
+588.40586	134	
+588.43264	128	
+588.47244	108	
+588.53107	44040	
+588.67733	106	
+588.72267	170	
+588.78139	106	
+589.13639	140	
+589.32547	108	
+589.53402	13510	
+589.62620	106	
+589.71848	122	
+590.53744	1082	
+591.53925	116	
+END IONS
+

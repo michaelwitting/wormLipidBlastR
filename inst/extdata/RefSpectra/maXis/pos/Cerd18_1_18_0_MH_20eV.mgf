@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\Cerd18_1_18_0_MH_20eV.mgf
+###	G:\20190719_LipidStdsPos\Cer_MH_1-A,6_01_27241.d\analysis.baf
+###	Cer_MH_1-A,6_01_27241.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    Cer_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=Cer_MH_1-A,6_01_27241.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(566.5507), 20.0eV, 15.9min #4745
+
+###FS:    #m/z: 566.55072 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(566.5507), 20.0eV, 15.9min #4745
+RTINSECONDS=0
+SCANS=
+PEPMASS=566.55072	
+95.08590	2506	
+121.10100	3784	
+135.11673	3394	
+211.20563	3316	
+247.24247	3364	
+252.26883	15970	
+253.27258	1848	
+264.26897	431088	
+264.30462	7100	
+264.36775	2892	
+265.27210	56058	
+266.27521	2246	
+282.27919	45090	
+283.28278	5962	
+284.29488	8158	
+518.52998	33302	
+519.53300	9474	
+530.52982	167890	
+530.56486	2512	
+531.53311	49692	
+532.53553	3636	
+548.35487	1482	
+548.44105	2494	
+548.45100	2256	
+548.54058	1156830	
+548.68129	25448	
+548.71481	3016	
+548.79245	14400	
+548.91491	7904	
+549.02108	4980	
+549.12314	17530	
+549.20777	1566	
+549.26094	3066	
+549.30141	2320	
+549.32525	1648	
+549.35339	2358	
+549.43963	2396	
+549.45901	2632	
+549.50162	2876	
+549.54389	429494	
+549.59328	5690	
+549.68591	7508	
+549.71586	2060	
+549.79736	2532	
+549.91856	2034	
+550.00770	1732	
+550.03030	1830	
+550.12445	3468	
+550.54672	40582	
+566.55013	1842	
+END IONS
+

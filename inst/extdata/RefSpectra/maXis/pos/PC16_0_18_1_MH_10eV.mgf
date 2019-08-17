@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PC16_0_18_1_MH_10eV.mgf
+###	G:\20190719_LipidStdsPos\PC_MH_1-A,3_01_27235.d\analysis.baf
+###	PC_MH_1-A,3_01_27235.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PC_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PC_MH_1-A,3_01_27235.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(760.5851), 10.0eV, 14.7min #4387
+
+###FS:    #m/z: 760.58508 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(760.5851), 10.0eV, 14.7min #4387
+RTINSECONDS=0
+SCANS=
+PEPMASS=760.58508	
+125.00020	482	
+184.07326	15558	
+185.07632	692	
+759.01590	484	
+759.03429	506	
+759.10345	490	
+759.15410	478	
+759.30063	624	
+759.40046	592	
+759.43739	522	
+759.55189	492	
+760.21062	544	
+760.32286	980	
+760.34459	1054	
+760.37764	1308	
+760.43194	1450	
+760.46058	1614	
+760.48597	1422	
+760.58511	690796	
+760.75152	13800	
+760.79274	2032	
+760.88304	7050	
+760.95685	1632	
+761.02152	4584	
+761.14831	3516	
+761.20255	1814	
+761.26990	8618	
+761.41020	1726	
+761.42896	1926	
+761.46063	1820	
+761.51436	1048	
+761.58841	288250	
+761.64222	4538	
+761.75167	3648	
+761.80527	1836	
+761.88876	2204	
+762.02220	1666	
+762.15182	1350	
+762.20065	908	
+762.27740	3070	
+762.45652	906	
+762.48005	892	
+762.59151	43878	
+762.74353	614	
+762.77804	616	
+762.80754	524	
+762.92932	628	
+762.97755	532	
+763.14487	504	
+763.59316	2278	
+END IONS
+

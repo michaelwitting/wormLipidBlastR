@@ -1,0 +1,44 @@
+###	C:\Users\witti\Desktop\RefSpectra\neg\GlcCerd18_1_18_0_MHCOO_40eV.mgf
+###	G:\20190720_LipidStdsNeg\GlcCer_MHCOO_1-A,8_01_27256.d\analysis.baf
+###	GlcCer_MHCOO_1-A,8_01_27256.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    GlcCer_MHCOO
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=GlcCer_MHCOO_1-A,8_01_27256.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	-MS2(772.5933), 40.0eV, 15.0min #3630
+
+###FS:    #m/z: 772.59332 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=-MS2(772.5933), 40.0eV, 15.0min #3630
+RTINSECONDS=0
+SCANS=
+PEPMASS=772.59332	
+143.03580	144	
+161.04559	361	
+179.05650	870	
+263.23604	125	
+283.26510	548	
+308.29545	197	
+324.28903	102	
+546.52409	156	
+564.53542	8446	
+565.53935	1574	
+726.58831	5426	
+727.59139	1233	
+END IONS
+

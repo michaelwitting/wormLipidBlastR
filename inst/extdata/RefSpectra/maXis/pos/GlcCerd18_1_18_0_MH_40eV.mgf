@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\GlcCerd18_1_18_0_MH_40eV.mgf
+###	G:\20190719_LipidStdsPos\GlcCer_MH_1-A,8_01_27245.d\analysis.baf
+###	GlcCer_MH_1-A,8_01_27245.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    GlcCer_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=GlcCer_MH_1-A,8_01_27245.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(728.6035), 40.0eV, 14.9min #4470
+
+###FS:    #m/z: 728.60352 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(728.6035), 40.0eV, 14.9min #4470
+RTINSECONDS=0
+SCANS=
+PEPMASS=728.60352	
+95.08590	19828	
+97.02894	3728	
+97.10159	9034	
+107.08569	7126	
+109.10142	13312	
+111.11663	4334	
+121.10132	22258	
+123.11687	8286	
+127.03907	6914	
+135.11688	15710	
+137.13220	3252	
+145.04945	5362	
+149.13207	4982	
+151.14859	2794	
+211.20557	4080	
+247.24213	8746	
+252.26862	124754	
+253.27188	15032	
+264.26905	1280154	
+264.30812	6504	
+264.36749	26576	
+264.39093	2346	
+264.44457	12014	
+264.52899	7398	
+264.59962	3426	
+264.67467	16866	
+265.25336	4674	
+265.27214	231906	
+265.30047	3352	
+266.27923	8680	
+267.26851	3030	
+282.27935	156648	
+282.30328	1998	
+283.28274	22238	
+284.29485	34030	
+285.29795	4318	
+444.33123	11620	
+445.33523	2310	
+518.52935	43988	
+519.53269	10992	
+530.52981	93110	
+531.53287	27176	
+532.54482	46064	
+533.54832	13220	
+548.54037	201384	
+548.58138	2740	
+549.54352	54998	
+550.54673	6864	
+710.59377	40300	
+711.59676	13936	
+END IONS
+

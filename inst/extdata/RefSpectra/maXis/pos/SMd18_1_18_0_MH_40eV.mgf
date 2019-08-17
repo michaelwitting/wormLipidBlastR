@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\SMd18_1_18_0_MH_40eV.mgf
+###	G:\20190719_LipidStdsPos\SM_MH_1-A,7_01_27243.d\analysis.baf
+###	SM_MH_1-A,7_01_27243.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    SM_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=SM_MH_1-A,7_01_27243.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(731.6062), 40.0eV, 14.5min #4341
+
+###FS:    #m/z: 731.60620 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(731.6062), 40.0eV, 14.5min #4341
+RTINSECONDS=0
+SCANS=
+PEPMASS=731.60620	
+98.98453	2296	
+104.10701	30158	
+105.11085	898	
+124.99955	39274	
+126.00424	454	
+143.01032	352	
+166.06292	1294	
+183.74689	426	
+183.77682	456	
+183.79170	402	
+183.81755	434	
+183.88128	348	
+183.89883	368	
+183.91892	330	
+183.98087	296	
+184.04832	1406	
+184.07315	1344964	
+184.10443	13514	
+184.15567	22322	
+184.17622	1632	
+184.22034	5838	
+184.29001	3818	
+184.32354	750	
+184.34905	1888	
+184.37836	1098	
+184.41162	11394	
+184.48338	698	
+184.49863	720	
+184.54199	544	
+184.58997	472	
+184.61816	530	
+184.62968	512	
+184.67473	502	
+184.70501	318	
+184.72986	454	
+184.75147	338	
+184.83066	398	
+185.07616	56706	
+185.21018	298	
+185.22470	316	
+186.07748	3814	
+264.26826	2342	
+265.27177	398	
+530.52670	1148	
+531.53329	560	
+548.54021	502	
+654.52187	346	
+713.59405	1260	
+714.59577	570	
+731.60481	950	
+END IONS
+

@@ -1,0 +1,70 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PE16_0_18_1_MNa_40eV.mgf
+###	G:\20190719_LipidStdsPos\PE_MNa_1-A,2_01_27234.d\analysis.baf
+###	PE_MNa_1-A,2_01_27234.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PE_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PE_MNa_1-A,2_01_27234.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(740.5201), 40.0eV, 14.8min #4434
+
+###FS:    #m/z: 740.52008 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(740.5201), 40.0eV, 14.8min #4434
+RTINSECONDS=0
+SCANS=
+PEPMASS=740.52008	
+95.08513	374	
+97.10122	280	
+108.08786	108	
+109.10018	164	
+111.11591	136	
+120.96566	5448	
+121.10033	170	
+133.08365	140	
+138.97488	220	
+145.99655	398	
+149.12802	154	
+164.00841	10890	
+165.01147	144	
+182.01721	540	
+205.03494	116	
+247.24061	100	
+265.25125	182	
+313.27139	116	
+323.29997	102	
+415.22055	454	
+433.23055	136	
+441.23696	648	
+459.24336	138	
+484.28248	106	
+553.32642	114	
+572.19746	116	
+573.21338	180	
+577.51766	3762	
+578.51967	1146	
+579.52712	122	
+599.49936	5860	
+600.50251	1906	
+617.51724	188	
+697.47539	2018	
+698.47279	594	
+699.48400	196	
+740.51873	1648	
+741.51769	420	
+END IONS
+

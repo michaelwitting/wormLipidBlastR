@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PG16_0_18_1_MNa_240eV.mgf
+###	G:\20190719_LipidStdsPos\PG_MNa_1-A,5_01_27240.d\analysis.baf
+###	PG_MNa_1-A,5_01_27240.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PG_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PG_MNa_1-A,5_01_27240.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(771.5147), 40.0eV, 13.6min #4074
+
+###FS:    #m/z: 771.51471 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(771.5147), 40.0eV, 13.6min #4074
+RTINSECONDS=0
+SCANS=
+PEPMASS=771.51471	
+95.08536	1606	
+96.08907	394	
+97.06552	160	
+97.10128	1368	
+98.10488	398	
+99.11736	344	
+109.10037	1030	
+110.10393	210	
+111.11565	488	
+121.10108	416	
+123.11642	288	
+124.11999	230	
+135.11599	328	
+137.13153	200	
+138.13676	230	
+149.13301	350	
+151.14735	182	
+171.13875	170	
+176.99073	310	
+195.00261	37882	
+196.00563	738	
+239.23750	434	
+240.24008	460	
+247.24183	262	
+265.25231	642	
+266.25846	186	
+267.25921	224	
+314.27722	320	
+315.27882	256	
+339.28921	338	
+340.29266	462	
+341.29351	384	
+382.97988	274	
+415.21966	168	
+441.23936	232	
+489.26104	238	
+515.27472	356	
+577.51763	5816	
+578.52168	6714	
+579.52431	7484	
+580.52728	13472	
+581.53086	3744	
+582.53428	570	
+599.49844	2108	
+600.50153	598	
+617.51127	476	
+618.51103	158	
+771.51186	2302	
+772.51461	828	
+773.51894	164	
+END IONS
+

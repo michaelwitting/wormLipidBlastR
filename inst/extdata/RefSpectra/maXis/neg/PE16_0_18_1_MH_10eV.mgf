@@ -1,0 +1,34 @@
+###	C:\Users\witti\Desktop\RefSpectra\neg\PE16_0_18_1_MH_10eV.mgf
+###	G:\20190720_LipidStdsNeg\PE_MH_1-A,2_01_27248.d\analysis.baf
+###	PE_MH_1-A,2_01_27248.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PE_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PE_MH_1-A,2_01_27248.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	-MS2(716.5225), 10.0eV, 14.8min #3588
+
+###FS:    #m/z: 716.52252 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=-MS2(716.5225), 10.0eV, 14.8min #3588
+RTINSECONDS=0
+SCANS=
+PEPMASS=716.52252	
+716.51685	11846	
+717.51918	2446	
+END IONS
+

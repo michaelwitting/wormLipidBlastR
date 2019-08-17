@@ -1,0 +1,80 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PC16_0_18_1_MNa_20eV.mgf
+###	G:\20190719_LipidStdsPos\PC_MNa_1-A,3_01_27236.d\analysis.baf
+###	PC_MNa_1-A,3_01_27236.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PC_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PC_MNa_1-A,3_01_27236.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(782.5670), 20.0eV, 14.5min #4333
+
+###FS:    #m/z: 782.56702 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(782.5670), 20.0eV, 14.5min #4333
+RTINSECONDS=0
+SCANS=
+PEPMASS=782.56702	
+146.98147	448	
+319.23453	154	
+399.61242	102	
+504.34230	328	
+577.51473	514	
+599.49815	740	
+600.50185	108	
+723.49235	2230	
+724.48978	586	
+725.49744	126	
+747.62818	100	
+779.54877	174	
+780.06178	380	
+780.55527	704	
+781.06136	532	
+781.19826	124	
+781.55984	354	
+782.05063	272	
+782.26388	114	
+782.40425	150	
+782.44764	176	
+782.49028	142	
+782.56727	79322	
+782.73450	458	
+782.80067	142	
+782.86850	322	
+782.95465	158	
+782.99842	154	
+783.02754	338	
+783.14209	132	
+783.18083	166	
+783.26747	326	
+783.33260	104	
+783.40765	210	
+783.48776	130	
+783.57011	26554	
+783.72605	120	
+783.80302	100	
+783.99588	152	
+784.11785	140	
+784.28339	134	
+784.45228	130	
+784.48003	144	
+784.57264	3680	
+784.80251	124	
+785.02621	112	
+785.57074	306	
+785.80571	112	
+END IONS
+

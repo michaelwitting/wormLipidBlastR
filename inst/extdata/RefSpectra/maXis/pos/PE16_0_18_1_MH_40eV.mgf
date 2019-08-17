@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PE16_0_18_1_MH_40eV.mgf
+###	G:\20190719_LipidStdsPos\PE_MH_1-A,2_01_27233.d\analysis.baf
+###	PE_MH_1-A,2_01_27233.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PE_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PE_MH_1-A,2_01_27233.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(718.5381), 40.0eV, 14.8min #4422
+
+###FS:    #m/z: 718.53809 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(718.5381), 40.0eV, 14.8min #4422
+RTINSECONDS=0
+SCANS=
+PEPMASS=718.53809	
+95.08580	76106	
+96.08900	4090	
+97.06502	1576	
+97.10118	45210	
+99.08025	2168	
+99.11684	7692	
+107.08530	5808	
+109.10076	48408	
+110.10439	2728	
+111.08010	2546	
+111.11629	21592	
+113.13160	4292	
+121.10045	23312	
+122.10376	1854	
+123.11605	24002	
+124.11962	1766	
+125.13155	9240	
+127.11081	1844	
+127.14713	2110	
+135.11578	18608	
+137.13167	10086	
+139.11096	1762	
+139.14742	2520	
+149.13182	7660	
+151.14767	6504	
+153.12644	3348	
+155.00954	1760	
+163.14713	3092	
+165.16326	4336	
+221.22417	2484	
+239.23565	23286	
+240.23946	3270	
+247.24076	6386	
+265.25121	28572	
+266.25495	4064	
+282.27775	6948	
+308.29326	10720	
+309.29620	1648	
+313.27281	8508	
+314.27581	1572	
+339.28759	10666	
+577.51832	435464	
+577.66340	5568	
+577.77891	3516	
+577.90019	2350	
+578.00906	1926	
+578.11794	3954	
+578.52187	159826	
+578.66749	1718	
+579.52448	19954	
+END IONS
+

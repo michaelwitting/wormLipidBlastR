@@ -1,0 +1,30 @@
+# template for PC [M+H]+
+# loss of headgroup
+precursor=50
+headgroup_loss=50
+phosphoheadgroup_loss=50
+# loss of fatty acids as ketene from precursor
+precursor_sn1Loss=50
+precursor_sn2Loss=50
+# loss of fatty acids as acids from precursor
+precursor_sn1Loss_H2OLoss=50
+precursor_sn2Loss_H2OLoss=50
+# loss of fatty acids as ketene from precursor - headgroup
+headgroup_loss_sn1Loss=50
+headgroup_loss_sn2Loss=50
+# loss of fatty acids as acids from precursor - headgroup
+headgroup_loss_sn1Loss_H2OLoss=50
+headgroup_loss_sn2Loss_H2OLoss=50
+# loss of fatty acids as ketene from precursor - phosphoheadgroup
+phosphoheadgroup_loss_sn1Loss=50
+phosphoheadgroup_loss_sn2Loss=50
+# loss of fatty acids as acids from precursor - phosphoheadgroup
+phosphoheadgroup_loss_sn1Loss_H2OLoss=50
+phosphoheadgroup_loss_sn2Loss_H2OLoss=50
+# fatty acid fragments
+sn1=50
+sn2=50
+# headgroup fragments
+phosphoheadgroup=50
+phosphoheadgroup_H2OLoss=50
+headgroup=50

@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\GlcCerd18_1_18_0_MH_10eV.mgf
+###	G:\20190719_LipidStdsPos\GlcCer_MH_1-A,8_01_27245.d\analysis.baf
+###	GlcCer_MH_1-A,8_01_27245.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    GlcCer_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=GlcCer_MH_1-A,8_01_27245.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(728.6035), 10.0eV, 14.9min #4468
+
+###FS:    #m/z: 728.60352 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(728.6035), 10.0eV, 14.9min #4468
+RTINSECONDS=0
+SCANS=
+PEPMASS=728.60352	
+264.26897	2286	
+530.52922	3388	
+531.53315	750	
+548.53990	47622	
+549.54364	12774	
+550.54581	1228	
+566.55061	60854	
+567.55325	17102	
+568.55687	2002	
+710.59345	246340	
+710.64251	3742	
+710.75482	2294	
+710.79419	582	
+710.88139	1274	
+711.01448	884	
+711.14554	572	
+711.25653	1892	
+711.59670	90948	
+711.75966	634	
+711.91255	562	
+712.59938	9620	
+713.60713	578	
+728.38578	600	
+728.43353	962	
+728.47425	836	
+728.50804	892	
+728.60379	524432	
+728.76709	7274	
+728.80669	1202	
+728.89439	5140	
+729.03050	3044	
+729.15433	2438	
+729.27541	5430	
+729.42635	1170	
+729.47651	876	
+729.53054	738	
+729.60714	222018	
+729.65567	3404	
+729.77168	2002	
+729.81351	1136	
+729.89841	1882	
+729.94296	1016	
+730.04392	1022	
+730.13996	996	
+730.19863	532	
+730.28187	1754	
+730.42699	566	
+730.47434	516	
+730.61017	28938	
+731.60979	1324	
+END IONS
+

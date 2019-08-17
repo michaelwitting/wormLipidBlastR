@@ -1,0 +1,8 @@
+#PE negative ion mode template [M-H]-
+precursor=300
+sn1Loss=5
+sn1LossH2O=5
+sn2Loss=5
+sn2LossH2O=5
+sn1=999
+sn2=999

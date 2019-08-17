@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\Cerd18_1_18_0_MH_40eV.mgf
+###	G:\20190719_LipidStdsPos\Cer_MH_1-A,6_01_27241.d\analysis.baf
+###	Cer_MH_1-A,6_01_27241.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    Cer_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=Cer_MH_1-A,6_01_27241.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(566.5507), 40.0eV, 15.9min #4746
+
+###FS:    #m/z: 566.55072 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(566.5507), 40.0eV, 15.9min #4746
+RTINSECONDS=0
+SCANS=
+PEPMASS=566.55072	
+95.08576	79820	
+96.08112	19986	
+97.06522	4460	
+97.10140	31852	
+99.11703	3836	
+100.07607	1852	
+107.08568	29418	
+109.10116	45556	
+110.09845	3090	
+111.08010	1904	
+111.11702	13672	
+121.10128	53844	
+122.10451	4074	
+123.11688	17276	
+125.13248	2740	
+135.11686	31466	
+136.12006	2778	
+137.13283	5986	
+149.13266	9602	
+151.14871	2066	
+165.16382	2514	
+211.20509	3608	
+247.24335	2498	
+252.26911	244724	
+252.29820	2716	
+253.27212	32614	
+264.22021	1990	
+264.27001	1332936	
+264.36788	35644	
+264.39213	3482	
+264.44487	18856	
+264.52846	14468	
+264.60157	6866	
+264.63078	2464	
+264.67411	24276	
+264.76158	2010	
+265.25269	5022	
+265.27250	321172	
+265.30457	4190	
+266.27545	12280	
+282.27963	309028	
+282.31246	3228	
+283.28272	43706	
+284.29473	33812	
+285.29851	4874	
+308.29491	2808	
+518.52942	2344	
+530.52964	9528	
+531.53311	3158	
+548.53997	2872	
+END IONS
+

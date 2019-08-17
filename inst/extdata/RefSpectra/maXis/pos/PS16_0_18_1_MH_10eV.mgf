@@ -1,0 +1,70 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PS16_0_18_1_MH_10eV.mgf
+###	G:\20190719_LipidStdsPos\PS_MH_1-A,4_01_27237.d\analysis.baf
+###	PS_MH_1-A,4_01_27237.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PS_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PS_MH_1-A,4_01_27237.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(762.5280), 10.0eV, 13.7min #4107
+
+###FS:    #m/z: 762.52802 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(762.5280), 10.0eV, 13.7min #4107
+RTINSECONDS=0
+SCANS=
+PEPMASS=762.52802	
+313.27543	102	
+577.51834	14426	
+578.04198	142	
+578.52211	3598	
+579.52591	398	
+743.07541	110	
+760.57824	146	
+760.86043	118	
+760.89722	116	
+761.00768	112	
+761.59174	336	
+761.93150	100	
+762.14006	186	
+762.34665	146	
+762.44188	160	
+762.52832	88064	
+762.64986	144	
+762.69448	580	
+762.75452	208	
+762.83063	386	
+762.88588	210	
+762.93255	222	
+762.98138	234	
+763.06222	166	
+763.09258	220	
+763.13034	118	
+763.21531	362	
+763.36086	322	
+763.46931	140	
+763.53015	30630	
+763.67630	194	
+763.75042	106	
+763.84716	112	
+763.88876	108	
+764.07039	160	
+764.53330	4244	
+765.53597	176	
+1273.07574	120	
+END IONS
+

@@ -1,0 +1,38 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PS16_0_18_1_MNa_10eV.mgf
+###	G:\20190719_LipidStdsPos\PS_MNa_1-A,4_01_27238.d\analysis.baf
+###	PS_MNa_1-A,4_01_27238.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PS_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PS_MNa_1-A,4_01_27238.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(784.5099), 10.0eV, 13.7min #4108
+
+###FS:    #m/z: 784.50989 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(784.5099), 10.0eV, 13.7min #4108
+RTINSECONDS=0
+SCANS=
+PEPMASS=784.50989	
+752.61031	126	
+783.55319	126	
+784.11180	102	
+784.50939	3886	
+785.51128	1318	
+786.51909	222	
+END IONS
+

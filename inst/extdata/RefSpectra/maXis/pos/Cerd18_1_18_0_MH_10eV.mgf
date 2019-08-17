@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\Cerd18_1_18_0_MH_10eV.mgf
+###	G:\20190719_LipidStdsPos\Cer_MH_1-A,6_01_27241.d\analysis.baf
+###	Cer_MH_1-A,6_01_27241.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    Cer_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=Cer_MH_1-A,6_01_27241.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(566.5507), 10.0eV, 15.9min #4744
+
+###FS:    #m/z: 566.55072 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(566.5507), 10.0eV, 15.9min #4744
+RTINSECONDS=0
+SCANS=
+PEPMASS=566.55072	
+264.26852	12332	
+265.27222	1184	
+282.28001	1186	
+518.52752	1862	
+530.52894	15042	
+531.53211	4038	
+547.59968	664	
+548.40673	1098	
+548.43112	1230	
+548.45581	1432	
+548.47988	1318	
+548.54047	715754	
+548.59367	7032	
+548.68134	13202	
+548.71686	1406	
+548.79182	6018	
+548.87143	1254	
+548.91459	4224	
+548.96059	1018	
+549.01862	2280	
+549.05885	1518	
+549.06326	1494	
+549.12414	9258	
+549.24928	1116	
+549.29829	1068	
+549.34549	962	
+549.36674	884	
+549.42100	1016	
+549.47057	1108	
+549.54397	254970	
+549.58789	4336	
+549.68519	2960	
+549.72291	870	
+549.79654	1528	
+549.85924	1078	
+549.92482	932	
+550.02091	916	
+550.06560	692	
+550.12841	1580	
+550.54699	20852	
+551.55144	724	
+566.55085	376082	
+566.59977	5032	
+566.69481	3508	
+566.80859	2012	
+566.92858	1332	
+567.04035	732	
+567.14419	2312	
+567.55431	119674	
+568.55623	10016	
+END IONS
+

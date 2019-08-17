@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\SMd18_1_18_0_MH_10eV.mgf
+###	G:\20190719_LipidStdsPos\SM_MH_1-A,7_01_27243.d\analysis.baf
+###	SM_MH_1-A,7_01_27243.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    SM_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=SM_MH_1-A,7_01_27243.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(731.6062), 10.0eV, 14.5min #4339
+
+###FS:    #m/z: 731.60620 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(731.6062), 10.0eV, 14.5min #4339
+RTINSECONDS=0
+SCANS=
+PEPMASS=731.60620	
+184.07317	7928	
+185.07398	188	
+687.75432	152	
+713.60140	206	
+729.59617	144	
+729.91028	142	
+730.33597	156	
+730.58751	240	
+731.13971	138	
+731.18393	172	
+731.26285	154	
+731.32410	196	
+731.36067	280	
+731.40029	174	
+731.45646	280	
+731.60512	179926	
+731.64473	2576	
+731.70545	290	
+731.76734	1240	
+731.82002	452	
+731.89796	850	
+731.98862	296	
+732.03483	362	
+732.13094	276	
+732.17330	506	
+732.27910	1102	
+732.35435	338	
+732.40136	200	
+732.45446	272	
+732.50911	216	
+732.53680	248	
+732.60821	64088	
+732.72536	334	
+732.77995	278	
+732.85730	164	
+732.89916	352	
+732.94196	252	
+732.99973	240	
+733.07805	200	
+733.11742	210	
+733.15081	184	
+733.17495	184	
+733.25261	148	
+733.29153	192	
+733.46237	214	
+733.61172	8792	
+733.73937	140	
+734.33587	156	
+734.49279	164	
+734.61111	310	
+END IONS
+

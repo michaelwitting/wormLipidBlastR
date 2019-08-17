@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PE16_0_18_1_MH_10eV.mgf
+###	G:\20190719_LipidStdsPos\PE_MH_1-A,2_01_27233.d\analysis.baf
+###	PE_MH_1-A,2_01_27233.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PE_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PE_MH_1-A,2_01_27233.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(718.5381), 10.0eV, 14.8min #4420
+
+###FS:    #m/z: 718.53809 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(718.5381), 10.0eV, 14.8min #4420
+RTINSECONDS=0
+SCANS=
+PEPMASS=718.53809	
+577.51789	47914	
+578.52011	11146	
+579.52243	1418	
+716.97537	306	
+717.03175	276	
+717.11149	352	
+717.23327	366	
+717.26904	248	
+717.31792	266	
+717.41731	254	
+717.51775	368	
+717.63170	264	
+717.99229	408	
+718.06505	260	
+718.24814	384	
+718.30676	486	
+718.34561	690	
+718.40488	676	
+718.43153	634	
+718.53792	389926	
+718.69862	5086	
+718.82693	2662	
+718.96180	2128	
+719.02536	712	
+719.07255	1298	
+719.13391	804	
+719.14301	848	
+719.20450	3782	
+719.34321	908	
+719.38135	728	
+719.40561	698	
+719.46668	724	
+719.54120	153728	
+719.70073	1200	
+719.73511	790	
+719.77582	356	
+719.82698	1006	
+719.93080	426	
+719.97715	624	
+720.06537	594	
+720.12145	354	
+720.21074	1216	
+720.31531	340	
+720.35061	382	
+720.45727	246	
+720.54380	19446	
+720.63800	240	
+720.84350	254	
+721.51127	238	
+721.54680	988	
+END IONS
+

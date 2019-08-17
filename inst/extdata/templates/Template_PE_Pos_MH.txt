@@ -1,0 +1,9 @@
+#PE positive ion mode template [M+H]+
+precursor=10
+precursorPhosphoEthaLoss=999
+sn1Loss=10
+sn1LossH2O=10
+sn2Loss=10
+sn2LossH2O=10
+sn1=10
+sn2=10

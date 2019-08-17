@@ -1,0 +1,73 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\PC16_0_18_1_MNa_10eV.mgf
+###	G:\20190719_LipidStdsPos\PC_MNa_1-A,3_01_27236.d\analysis.baf
+###	PC_MNa_1-A,3_01_27236.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    PC_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=PC_MNa_1-A,3_01_27236.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(782.5670), 10.0eV, 14.5min #4332
+
+###FS:    #m/z: 782.56702 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(782.5670), 10.0eV, 14.5min #4332
+RTINSECONDS=0
+SCANS=
+PEPMASS=782.56702	
+723.49104	456	
+779.56113	126	
+780.05725	426	
+780.55919	1402	
+780.89850	134	
+781.02492	132	
+781.06606	666	
+781.22409	280	
+781.56034	302	
+781.61894	104	
+781.74855	118	
+782.05459	216	
+782.22720	136	
+782.36834	188	
+782.47546	254	
+782.56721	62778	
+782.73601	306	
+782.77894	248	
+782.83861	174	
+782.89065	168	
+782.92961	112	
+782.98304	190	
+783.06402	1570	
+783.17776	108	
+783.22464	166	
+783.26660	230	
+783.33387	132	
+783.36510	130	
+783.39862	132	
+783.44296	190	
+783.50621	186	
+783.56997	19946	
+783.82205	106	
+783.85688	130	
+783.95222	126	
+784.06702	220	
+784.18474	128	
+784.48836	114	
+784.57105	3052	
+784.67858	116	
+785.57577	220	
+END IONS
+

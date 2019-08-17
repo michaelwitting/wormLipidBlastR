@@ -1,0 +1,69 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\SMd18_1_18_0_MNa_10eV.mgf
+###	G:\20190719_LipidStdsPos\SM_MNa_1-A,7_01_27244.d\analysis.baf
+###	SM_MNa_1-A,7_01_27244.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    SM_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=SM_MNa_1-A,7_01_27244.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(753.5881), 10.0eV, 14.8min #4411
+
+###FS:    #m/z: 753.58807 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(753.5881), 10.0eV, 14.8min #4411
+RTINSECONDS=0
+SCANS=
+PEPMASS=753.58807	
+104.10832	102	
+570.52125	104	
+694.51417	538	
+750.57473	272	
+751.08137	822	
+751.58095	1334	
+751.91042	164	
+752.08496	324	
+752.14126	170	
+752.57934	186	
+752.81045	144	
+753.09112	134	
+753.39478	164	
+753.47901	118	
+753.51829	252	
+753.58749	60148	
+753.75966	198	
+753.80532	144	
+753.84057	202	
+753.88437	330	
+753.93739	122	
+754.01814	142	
+754.08858	866	
+754.19837	114	
+754.26821	124	
+754.36055	110	
+754.52423	156	
+754.59030	22384	
+754.86101	114	
+754.93192	116	
+754.98552	156	
+755.03237	112	
+755.09264	236	
+755.17646	120	
+755.59298	2964	
+756.59436	202	
+1228.89968	108	
+END IONS
+

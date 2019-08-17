@@ -1,0 +1,71 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\SMd18_1_18_0_MNa_20eV.mgf
+###	G:\20190719_LipidStdsPos\SM_MNa_1-A,7_01_27244.d\analysis.baf
+###	SM_MNa_1-A,7_01_27244.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    SM_MNa
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=SM_MNa_1-A,7_01_27244.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(753.5881), 20.0eV, 14.8min #4412
+
+###FS:    #m/z: 753.58807 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(753.5881), 20.0eV, 14.8min #4412
+RTINSECONDS=0
+SCANS=
+PEPMASS=753.58807	
+104.10620	118	
+570.51978	684	
+571.52286	158	
+694.51370	3226	
+695.51731	980	
+696.52534	102	
+750.58030	294	
+751.07984	704	
+751.58177	1424	
+752.08521	812	
+752.14576	132	
+752.57992	206	
+752.65866	100	
+753.08350	308	
+753.13799	128	
+753.29675	110	
+753.37148	116	
+753.39020	162	
+753.46352	126	
+753.52014	114	
+753.58760	70870	
+753.75479	380	
+753.80009	168	
+753.88823	158	
+754.03069	188	
+754.11697	170	
+754.16803	132	
+754.27158	226	
+754.38164	126	
+754.59095	24942	
+754.75622	100	
+754.86577	162	
+755.07967	112	
+755.29676	110	
+755.38559	120	
+755.59269	2958	
+756.60071	402	
+1207.88172	118	
+1258.04553	100	
+END IONS
+

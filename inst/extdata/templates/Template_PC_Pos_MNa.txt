@@ -1,0 +1,9 @@
+#PC positive ion mode template [M+H]+
+precursor=300
+precursorCholLoss=500
+precursorHeadgroupLoss=999
+sn1Loss=50
+sn1LossH2O=50
+sn2Loss=50
+sn2LossH2O=50
+headgroup=0

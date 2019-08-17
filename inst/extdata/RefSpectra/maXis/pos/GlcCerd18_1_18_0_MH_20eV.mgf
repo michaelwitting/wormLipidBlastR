@@ -1,0 +1,82 @@
+###	C:\Users\witti\Desktop\RefSpectra\pos\GlcCerd18_1_18_0_MH_20eV.mgf
+###	G:\20190719_LipidStdsPos\GlcCer_MH_1-A,8_01_27245.d\analysis.baf
+###	GlcCer_MH_1-A,8_01_27245.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    GlcCer_MH
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=GlcCer_MH_1-A,8_01_27245.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	+MS2(728.6035), 20.0eV, 14.9min #4469
+
+###FS:    #m/z: 728.60352 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=+MS2(728.6035), 20.0eV, 14.9min #4469
+RTINSECONDS=0
+SCANS=
+PEPMASS=728.60352	
+252.26790	1132	
+264.26872	33568	
+265.27183	3516	
+282.27876	2308	
+518.52905	2910	
+530.52955	51774	
+531.53249	15640	
+532.54315	4148	
+533.54855	1128	
+548.54034	432112	
+548.59040	4892	
+548.68216	3708	
+548.79511	2554	
+548.91594	1542	
+549.00771	1028	
+549.02698	1092	
+549.12279	2600	
+549.54392	139068	
+549.57920	3210	
+550.54689	12666	
+566.55048	73886	
+567.55393	21514	
+568.55551	2078	
+710.42931	1190	
+710.47014	1466	
+710.59329	697558	
+710.75338	14246	
+710.79362	2034	
+710.88217	6022	
+711.01774	3832	
+711.13227	3046	
+711.25746	7058	
+711.39109	1602	
+711.41310	1710	
+711.47159	1286	
+711.52265	1194	
+711.59673	290834	
+711.64754	4152	
+711.76189	3150	
+711.79907	1370	
+711.82628	1126	
+711.88660	2318	
+712.02263	1460	
+712.05670	1126	
+712.26259	2294	
+712.59964	36318	
+713.60177	1266	
+728.60325	26406	
+729.60630	10292	
+730.60737	1726	
+END IONS
+

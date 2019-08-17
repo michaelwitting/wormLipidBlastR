@@ -1,0 +1,47 @@
+###	C:\Users\witti\Desktop\RefSpectra\neg\Cerd18_1_18_0_MHCOO_10eV.mgf
+###	G:\20190720_LipidStdsNeg\Cer_MHCOO_1-A,6_01_27255.d\analysis.baf
+###	Cer_MHCOO_1-A,6_01_27255.d
+###	Instrument: maXis
+###	Manufacturer: Bruker
+###    Cer_MHCOO
+###    PeakWidth 5.00, MiniumIntensity 100, S/N 1Apply threshold 0, Threshold 10
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 10, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, MW agreement 0.00, Abund. cutoff 2.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 5, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 4, Abund. cutoff 0.50
+###    Global Charge Limit: yes 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, Intensity threshold: 100, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 20, NormalizeData: no, SingleCharged: no
+###
+COM=Cer_MHCOO_1-A,6_01_27255.d
+USERNAME=MW
+CHARGE=1+, 2+ and 3+
+
+###	-MS2(610.5405), 10.0eV, 16.0min #3876
+
+###FS:    #m/z: 610.54053 #charge undefined
+###MS: 
+###MSMS: 
+BEGIN IONS
+TITLE=-MS2(610.5405), 10.0eV, 16.0min #3876
+RTINSECONDS=0
+SCANS=
+PEPMASS=610.54053	
+564.53570	6763	
+565.53773	1515	
+610.36243	156	
+610.40771	185	
+610.42913	179	
+610.54195	118621	
+610.64066	110	
+610.67019	206	
+610.80514	109	
+610.89112	150	
+610.91634	103	
+610.97869	110	
+611.08628	104	
+611.54503	25199	
+612.54527	142	
+END IONS
+
