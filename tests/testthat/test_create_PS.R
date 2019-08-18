@@ -15,7 +15,7 @@ test_that("Correct prediction for PS(16:0/18:1(9Z)), [M+H]+, std template", {
                      chemFormula = "C42H82NO8P")
   
   ## generate spectrum
-  ps_spec <- create_pos_PS_MH(lipid_info)
+  ps_spec <- create_pos_PS(lipid_info, adduct = "[M+H]+")
   
   ## tests
   expect_equal(round(precursorMz(ps_spec[[1]]), 4), 762.5280)
@@ -32,7 +32,7 @@ test_that("Correct prediction for PS(16:0/18:1(9Z)), [M+Na]+, std template", {
                      chemFormula = "C42H82NO8P")
   
   ## generate spectrum
-  ps_spec <- create_pos_PS_MNa(lipid_info)
+  ps_spec <- create_pos_PS(lipid_info, adduct = "[M+Na]+")
   
   ## tests
   expect_equal(round(precursorMz(ps_spec[[1]]), 4), 784.5099)
@@ -54,7 +54,7 @@ test_that("Correct prediction for PS(16:0/18:1(9Z)), [M-H]-, std template", {
                      chemFormula = "C39H76NO8P")
   
   ## generate spectrum
-  ps_spec <- create_neg_PS_MH(lipid_info)
+  ps_spec <- create_neg_PS(lipid_info, adduct = "[M-H]-")
   
   ## tests
   expect_equal(round(precursorMz(ps_spec[[1]]), 4), 760.5134)
