@@ -29,10 +29,110 @@ library(MSnbase)
 # Prediction of spectra
 
 After installation different functions are available for prediction. Currently supported lipid clases are PCs (1,2-diacyl-PCs, LM...), PEs (1,2-diacyl-PEs, LM...) and PS (1,2-diacyl-PSs, LM...). More lipid classes will be added soon. Predictions are based on masses for different building blocks as provived by the <code>lipidomicsUtils</code> package.
+Basic information for the prediction of a spectra is a lipid shorthand notation according to Liebisch et al. [2], an id and a chemical formula. They have to be supplied as named list. As first example Pc(16:0/18:1(9Z)) is selected.
 
 ```{r}
+  ## precalculations
+  lipid_info <- list(lipid = "PC(16:0/18:1(9Z))",
+                    id = "0001",
+                    chemFormula = "C42H82NO8P")
+```
 
+First a simple spectrum of this PC ionizing as [M+H]+ in positive ionization mode is created.
+
+```{r}
+## generate spectrum
+pc_spec <- create_pos_PC(lipid_info, adduct = "[M+H]+")
+```
+
+<code>pc_spec</code> is an <code>MSnbase</code> <code>spectra</code> object, which is basically a list of spectra. We can access the single spectra via their index and <code>[[]]</code>. Since we only have one spectrum the index is 1.
+
+```{r}
+pc_spec[[1]]
+```
+
+The spectrum is of the class <code>Spectrum2</code> from <code>MSnbase</code>. It can be simply plotted.
+
+```{r}
+plot(pc_spec[[1]])
+```
+
+How does the function know which fragments it needs to predict. Within the package several templates are hardcoded which serve as fall back if no user defined template is supplied. They are based on measurements of lipid standards on a Bruker maXis UHR-ToF-MS under a collision energy of 40eV.
+Also different adducts are available. For example for PCs in positive ion mode so far [M+H]+ and [M+Na]+ have been implemented.
+
+```{r}
+## generate spectrum
+pc_spec <- create_pos_PC(lipid_info, adduct = "[M+Na]+")
+plot(pc_spec[[1]])
+```
+
+Templates are nothing else then named lists, where the names serve as formula how to calculate the respective fragment m/z and the values are the intensities. In order to be able to calculate fragment m/z values the individual function precompute masses of building blocks for each lipid class. The name of this building blocks can called by the function <code>buildingblocks_pos_PC</code>.
+
+```{r}
+buildingblocks_pos_PC()
+```
+
+The different buidling blocks are:
+- <code>adduct_mass</code> which represents the ion mass of the selected lipid and the specific adduct (PC(16:0/18:1(9Z)) and the respective selected adduct)
+
+Based on this building blocks user can define own calculations of fragment m/z values based on their fragmentatoin spectra. The supplied formulas are evaluated using the function <code>eval(parse(text = x))</code>. The spectra of default template for PCs fragmentated from the [M+H]+ can be simply reconstructed like this. Since <code>lipidomicsUtils</code> in the background relies on the <code>rcdk</code> package  their formula and mass calculations can be also used to calculate constant masses that might be not covered by the supplied buidling blocks.
+
+```{r}
+  template <- list(
+    "adduct_mass" = 20,
+    "pc_mass + proton_mass" = 999
+  )
+```
+
+This template can be passed over to the function via the <code>template</code> argument. This recreates the original spectrum from the default template.
+
+```{r}
+pc_spec <- create_pos_PC(lipid_info, adduct = "[M+H]+", template = template)
+plot(pc_spec[[1]])
+```
+
+The different intensties can be adjusted to create a different spectrum.
+
+```{r}
+  template <- list(
+    "adduct_mass" = 500,
+    "pc_mass + proton_mass" = 999
+  )
+pc_spec <- create_pos_PC(lipid_info, adduct = "[M+H]+", template = template)
+plot(pc_spec[[1]])
+```
+
+In order to create a more complicated template the fragmentation of [M+FA-H]- adducts of PCs in negative ion mode is used. Likewise, the negative ion mode function also supplies different building blocks.
+
+```{r}
+buildingblocks_neg_PC()
+```
+
+A specific feature of the fragmentation of this ion species is the neutral loss of 60 Da which are attributed to the loss of formate and a methylgroup from the headgroup. This loss is not hard-coded in a specific building block, but needs to be calculated using functions from <code>rcdk</code>. The example below illustrates the default template for this fragmentation.
+
+```{r}
+  template <- list(
+    "adduct_mass" = 5,
+    "adduct_mass - sn1_mass + water_mass" = 5,
+    "adduct_mass - sn2_mass + water_mass" = 5,
+    "adduct_mass - sn1_mass" = 5,
+    "adduct_mass - sn2_mass" = 5,
+    "sn1_mass - proton_mass" = 999,
+    "sn2_mass - proton_mass" = 999,
+    "rcdk::get.formula('C2H7NO4P', charge = -1)@mass" = 5,
+    "rcdk::get.formula('C2H7NO4P', charge = -1)@mass - water_mass" = 5
+  )
+
+template
+```
+
+This template can be supplied to the respective function.
+
+```{r}
+pc_spec <- create_neg_PC(lipid_info, adduct = "[M+FA-H]-", template = template)
+plot(pc_spec[[1]])
 ```
 
 
 [1] LipidBlast paper
+[2] Liebisch paper
