@@ -139,7 +139,7 @@ create_neg_PS <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #' @export
-buildingblocks_neg_PS_MH <- function() {
+buildingblocks_neg_PS <- function() {
   
   building_blocks <- c("adduct_mass", "gps_mass", "ps_mass",
                        "water_mass", "serine_mass", "proton_mass",

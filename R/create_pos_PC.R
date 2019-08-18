@@ -163,20 +163,7 @@ create_pos_PC <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #' @export
-buildingblocks_pos_PC_MH <- function() {
-  
-  building_blocks <- c("adduct_mass", "gpc_mass", "pc_mass",
-                       "water_mass", "choline_mass", "proton_mass",
-                       "sodium_ion_mass","sn1_mass", "sn2_mass")
-  
-  # return values
-  return(building_blocks)
-}
-
-#'
-#'
-#' @export
-buildingblocks_pos_PC_MNa <- function() {
+buildingblocks_pos_PC <- function() {
   
   building_blocks <- c("adduct_mass", "gpc_mass", "pc_mass",
                        "water_mass", "choline_mass", "proton_mass",
