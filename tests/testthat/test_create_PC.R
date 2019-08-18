@@ -15,7 +15,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+H]+, std template", {
                     chemFormula = "C42H82NO8P")
   
   ## generate spectrum
-  pc_spec <- create_pos_PC_MH(lipid_info)
+  pc_spec <- create_pos_PC(lipid_info, adduct = "[M+H]+")
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 760.5851)
@@ -31,7 +31,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+Na]+, std template", {
                     chemFormula = "C42H82NO8P")
 
   ## generate spectrum
-  pc_spec <- create_pos_PC_MNa(lipid_info)
+  pc_spec <- create_pos_PC(lipid_info, adduct = "[M+Na]+")
 
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 782.5670)
@@ -56,7 +56,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+FA-H]-, std template", {
                     chemFormula = "C42H82NO8P")
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MFAH(lipid_info)
+  pc_spec <- create_neg_PC(lipid_info, "[M+FA-H]-")
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 804.5760)
@@ -73,7 +73,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+HAc-H]-, std template", 
                     chemFormula = "C42H82NO8P")
 
   ## generate spectrum
-  pc_spec <- create_neg_PC_MHAcH(lipid_info)
+  pc_spec <- create_neg_PC(lipid_info, "[M+HAc-H]-")
 
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 818.5917)
@@ -94,7 +94,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+FA-H]-, user-def templat
   template <- list("adduct_mass" = 999)
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MFAH(lipid_info, template = template)
+  pc_spec <- create_neg_PC(lipid_info, adduct = "[M+FA-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 804.5760)
@@ -106,7 +106,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+FA-H]-, user-def templat
                    "adduct_mass - rcdk::get.formula('C2H4O2')@mass" = 100)
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MFAH(lipid_info, template = template)
+  pc_spec <- create_neg_PC(lipid_info, adduct = "[M+FA-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 804.5760)
@@ -120,7 +120,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+FA-H]-, user-def templat
                    "sn2_mass - proton_mass" = 999)
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MFAH(lipid_info, template = template)
+  pc_spec <- create_neg_PC(lipid_info, adduct = "[M+FA-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 804.5760)
@@ -140,7 +140,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+HAc-H]-, std template", 
   template <- list("adduct_mass" = 999)
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MHAcH(lipid_info, template = template)
+  pc_spec <- create_neg_PC(lipid_info, adduct = "[M+HAc-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 818.5917)
@@ -152,7 +152,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+HAc-H]-, std template", 
                    "adduct_mass - rcdk::get.formula('C3H6O2')@mass" = 100)
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MHAcH(lipid_info, template = template)
+  pc_spec <- create_neg_PC(lipid_info, adduct = "[M+HAc-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 818.5917)
@@ -166,7 +166,7 @@ test_that("Correct prediction for PC(16:0/18:1(9Z)), [M+HAc-H]-, std template", 
                    "sn2_mass - proton_mass" = 999)
   
   ## generate spectrum
-  pc_spec <- create_neg_PC_MHAcH(lipid_info, template = template)
+  pc_spec <- create_neg_PC(lipid_info, adduct = "[M+HAc-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pc_spec[[1]]), 4), 818.5917)

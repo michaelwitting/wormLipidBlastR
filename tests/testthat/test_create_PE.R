@@ -15,7 +15,7 @@ test_that("Correct prediction for PE(16:0/18:1(9Z)), [M+H]+, std template", {
                     chemFormula = "C39H76NO8P")
   
   ## generate spectrum
-  pe_spec <- create_pos_PE_MH(lipid_info)
+  pe_spec <- create_pos_PE(lipid_info, adduct = "[M+H]+")
   
   ## tests
   expect_equal(round(precursorMz(pe_spec[[1]]), 4), 718.5381)
@@ -32,7 +32,7 @@ test_that("Correct prediction for PE(16:0/18:1(9Z)), [M+Na]+", {
                     chemFormula = "C39H76NO8P")
 
   ## generate spectrum
-  pe_spec <- create_pos_PE_MNa(lipid_info)
+  pe_spec <- create_pos_PE(lipid_info, adduct = "[M+Na]+")
 
   ## tests
   expect_equal(round(precursorMz(pe_spec[[1]]), 4), 740.5201)
@@ -55,7 +55,7 @@ test_that("Correct prediction for PE(16:0/18:1(9Z)), [M-H]-, std template", {
                     chemFormula = "C39H76NO8P")
   
   ## generate spectrum
-  pe_spec <- create_neg_PE_MH(lipid_info)
+  pe_spec <- create_neg_PE(lipid_info, adduct = "[M-H]-")
   
   ## tests
   expect_equal(round(precursorMz(pe_spec[[1]]), 4), 716.5236)
@@ -78,7 +78,7 @@ test_that("Correct prediction for PE(16:0/18:1(9Z)), [M-H]-, user-def template",
   template <- list("adduct_mass" = 999)
   
   ## generate spectrum
-  pe_spec <- create_neg_PE_MH(lipid_info, template = template)
+  pe_spec <- create_neg_PE(lipid_info, adduct = "[M-H]-",template = template)
   
   ## tests
   expect_equal(round(precursorMz(pe_spec[[1]]), 4), 716.5236)
@@ -91,7 +91,7 @@ test_that("Correct prediction for PE(16:0/18:1(9Z)), [M-H]-, user-def template",
                    "adduct_mass - sn2_mass + water_mass" = 100)
   
   ## generate spectrum
-  pe_spec <- create_neg_PE_MH(lipid_info, template = template)
+  pe_spec <- create_neg_PE(lipid_info, adduct = "[M-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pe_spec[[1]]), 4), 716.5236)
@@ -106,7 +106,7 @@ test_that("Correct prediction for PE(16:0/18:1(9Z)), [M-H]-, user-def template",
                    "sn2_mass - proton_mass" = 999)
   
   ## generate spectrum
-  pe_spec <- create_neg_PE_MH(lipid_info, template = template)
+  pe_spec <- create_neg_PE(lipid_info, adduct = "[M-H]-", template = template)
   
   ## tests
   expect_equal(round(precursorMz(pe_spec[[1]]), 4), 716.5236)
