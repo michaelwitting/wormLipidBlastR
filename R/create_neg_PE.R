@@ -4,13 +4,16 @@
 #' @import S4Vectors
 #'
 #' @export
-create_neg_PE_MH <- function(lipid_info, template = NA, ...) {
+create_neg_PE <- function(lipid_info, adduct, template = NA, ...) {
   
   ## some sanity checks here ---------------------------------------------------
   # TODO add checks for correct lipid class here
-
+  if(!adduct %in% c("[M-H]-")) {
+    stop("unsupported adduct")
+  }
+  
   ## check if template file is supplied, other wise use hard coded template ----
-  if(is.na(template)) {
+  if(is.na(template) & adduct == "[M-H]-") {
     template <- .template_neg_PE_MH()
   }
   
@@ -37,7 +40,7 @@ create_neg_PE_MH <- function(lipid_info, template = NA, ...) {
   lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
   
   # calculate adduct mass ------------------------------------------------------
-  adduct_mass <- lipidomicsUtils::calc_adduct_mass(lipid_mass, "[M-H]-")
+  adduct_mass <- lipidomicsUtils::calc_adduct_mass(lipid_mass, adduct)
   
   # generate MS2 spectrum ------------------------------------------------------
   mz <- unlist(lapply(names(template), function(x) {eval(parse(text = x))}))
@@ -88,7 +91,7 @@ create_neg_PE_MH <- function(lipid_info, template = NA, ...) {
   mcols(lipidSpectrum)$msType <- "MS2"
   mcols(lipidSpectrum)$ionMode <- "NEGATIVE"
   mcols(lipidSpectrum)$precursorMz <- adduct_mass
-  mcols(lipidSpectrum)$precursorType <- "[M-H]-"
+  mcols(lipidSpectrum)$precursorType <- adduct
   mcols(lipidSpectrum)$splash <- splash
   mcols(lipidSpectrum)$numPeak <- peaksCount(ms2Spec)
   
@@ -136,7 +139,7 @@ create_neg_PE_MH <- function(lipid_info, template = NA, ...) {
 #'
 #'
 #' @export
-buildingblocks_neg_PE_MH <- function() {
+buildingblocks_neg_PE <- function() {
   
   building_blocks <- c("adduct_mass", "gpe_mass", "pe_mass",
                        "water_mass", "ethanolamine_mass", "proton_mass",
