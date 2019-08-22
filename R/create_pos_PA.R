@@ -4,20 +4,21 @@
 #' @import S4Vectors
 #'
 #' @export
-create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
+create_pos_PA <- function(lipid_info, adduct, template = NA, ...) {
   
   ## some sanity checks here ---------------------------------------------------
   # TODO add checks for correct lipid class here
-  if(!adduct %in% c("[M+H]+", "[M+Na]+")) {
+  if(!adduct %in% c("[M+H]+")) {
     stop("unsupported adduct")
   }
   
   ## check if template file is supplied, other wise use hard coded template ----
   if(is.na(template) & adduct == "[M+H]+") {
-    template <- .template_pos_PE_MH()
-  } else if(is.na(template) & adduct == "[M+Na]+") {
-    template <- .template_pos_PE_MNa()
+    template <- .template_pos_PA_MH()
   }
+  # } else if(is.na(template) & adduct == "[M+Na]+") {
+  #   template <- .template_pos_PE_MNa()
+  # }
   
   ## get lipid information------------------------------------------------------
   lipid <- lipid_info$lipid
@@ -25,10 +26,9 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
   chemFormula <- lipid_info$chemFormula
   
   ## get masses for calculation ------------------------------------------------
-  gpe_mass <- lipidomicsUtils:::gpe_mass
-  pe_mass <- lipidomicsUtils:::pe_mass
+  pg_mass <- lipidomicsUtils:::pg_mass
+  h3po4_mass <- lipidomicsUtils:::h3po4_mass
   water_mass <- lipidomicsUtils:::water_mass
-  ethanolamine_mass <- lipidomicsUtils:::ethanolamine_mass
   proton_mass <- lipidomicsUtils:::proton_mass
   sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
   
@@ -121,17 +121,13 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #'
-.template_pos_PE_MH <- function() {
+.template_pos_PA_MH <- function() {
   
   template <- list(
     "adduct_mass" = 10,
-    "adduct_mass - pe_mass" = 999,
-    "sn1_mass - rcdk::get.formula('OH', charge = -1)@mass" = 50,
-    "sn2_mass - rcdk::get.formula('OH', charge = -1)@mass" = 50,
-    "adduct_mass - pe_mass - sn1_mass + water_mass" = 20,
-    "adduct_mass - pe_mass - sn2_mass + water_mass" = 20
+    "adduct_mass - h3po4_mass" = 999
   )
-
+  
   # return template
   return(template)
   
@@ -141,16 +137,10 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #'
-.template_pos_PE_MNa <- function() {
+.template_pos_PA_MNa <- function() {
   
   template <- list(
-    "adduct_mass" = 10,
-    "adduct_mass - rcdk::get.formula('C2H5N')@mass" = 20,
-    "adduct_mass - pe_mass" = 500,
-    "adduct_mass - pe_mass - sodium_ion_mass + proton_mass" = 300,
-    "adduct_mass - rcdk::get.formula('C2H5N')@mass - sn1_mass" = 50,
-    "adduct_mass - rcdk::get.formula('C2H5N')@mass - sn2_mass" = 50,
-    "pe_mass + sodium_ion_mass" = 999 
+
   )
   
   # return template
@@ -161,11 +151,11 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #' @export
-buildingblocks_pos_PE <- function() {
+buildingblocks_pos_PA <- function() {
   
-  building_blocks <- c("adduct_mass", "gpe_mass", "pe_mass",
+  building_blocks <- c("adduct_mass", "pg_mass", "h3po4_mass",
                        "water_mass", "ethanolamine_mass", "proton_mass",
-                       "sodium_ion_mass","sn1_mass", "sn2_mass")
+                       "sodium_ion_mass", "sn1_mass", "sn2_mass")
   
   # return values
   return(building_blocks)

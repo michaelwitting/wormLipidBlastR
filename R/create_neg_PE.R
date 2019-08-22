@@ -27,7 +27,7 @@ create_neg_PE <- function(lipid_info, adduct, template = NA, ...) {
   pe_mass <- lipidomicsUtils:::pe_mass
   water_mass <- lipidomicsUtils:::water_mass
   ethanolamine_mass <- lipidomicsUtils:::ethanolamine_mass
-  proton_mass  <- rcdk::get.formula("H", charge = 1)@mass
+  proton_mass <- lipidomicsUtils:::proton_mass
   
   ## get fatty acids -----------------------------------------------------------
   fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)

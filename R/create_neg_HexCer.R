@@ -1,23 +1,25 @@
-#' Generation of PC [M+H]+ MS2 spectrum
-#'
+#' Generation of fragmentation spectra for PC [M+FA-H]-
+#' 
 #' @import MSnbase
 #' @import S4Vectors
 #'
 #' @export
-create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
+create_neg_HexCer <- function(lipid_info, adduct, template = NA, ...) {
   
   ## some sanity checks here ---------------------------------------------------
   # TODO add checks for correct lipid class here
-  if(!adduct %in% c("[M+H]+", "[M+Na]+")) {
+  if(!adduct %in% c("[M-H]-", "[M+FA-H]-")) {
     stop("unsupported adduct")
   }
   
   ## check if template file is supplied, other wise use hard coded template ----
-  if(is.na(template) & adduct == "[M+H]+") {
-    template <- .template_pos_PE_MH()
-  } else if(is.na(template) & adduct == "[M+Na]+") {
-    template <- .template_pos_PE_MNa()
-  }
+  if(is.na(template) & adduct == "[M-H]-") {
+    template <- .template_Hexneg_Cer_MH()
+  } else if(is.na(template) & adduct == "[M+FA-H]-") {
+    template <- .template_neg_HexCer_MFAH()
+  } #else if(is.na(template) & adduct == "[M+HAc-H]-") {
+    #template <- .template_neg_HxCer_MHAcH()
+  #}
   
   ## get lipid information------------------------------------------------------
   lipid <- lipid_info$lipid
@@ -25,21 +27,19 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
   chemFormula <- lipid_info$chemFormula
   
   ## get masses for calculation ------------------------------------------------
-  gpe_mass <- lipidomicsUtils:::gpe_mass
-  pe_mass <- lipidomicsUtils:::pe_mass
   water_mass <- lipidomicsUtils:::water_mass
-  ethanolamine_mass <- lipidomicsUtils:::ethanolamine_mass
   proton_mass <- lipidomicsUtils:::proton_mass
-  sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
+  hexose_mass <- lipidomicsUtils:::hexose_mass
   
-  ## get fatty acids -----------------------------------------------------------
+  ## get fatty acids and calculate mass ----------------------------------------
   fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)
+  acyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
   
-  # calculate masses of different fatty acids ----------------------------------
-  sn1_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
-  sn2_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[2])
+  # get sphingoid base ---------------------------------------------------------
+  sphingoidBase <- lipidomicsUtils::isolate_sphingoid_base(lipid)
+  sphingoid_mass <- lipidomicsUtils::calc_sphingoid_mass(sphingoidBase)
   
-  # calculate mass of intact PE ------------------------------------------------
+  # calculate mass of intact PC ------------------------------------------------
   lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
   
   # calculate adduct mass ------------------------------------------------------
@@ -92,7 +92,7 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
   mcols(lipidSpectrum)$instrument <- "prediction"
   mcols(lipidSpectrum)$instrumentType <- "prediction"
   mcols(lipidSpectrum)$msType <- "MS2"
-  mcols(lipidSpectrum)$ionMode <- "POSITIVE"
+  mcols(lipidSpectrum)$ionMode <- "NEGATIVE"
   mcols(lipidSpectrum)$precursorMz <- adduct_mass
   mcols(lipidSpectrum)$precursorType <- adduct
   mcols(lipidSpectrum)$splash <- splash
@@ -101,16 +101,16 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
   # additional metadata supplied via ...
   # RT
   if(!"RT" %in% names(add_args)) {
-    mcols(lipidSpectrum)$RT <- 0
+    mcols(lipidSpectrum)$rt <- 0
   } else {
-    mcols(lipidSpectrum)$RT <- add_args[["RT"]]
+    mcols(lipidSpectrum)$rt <- add_args[["RT"]]
   }
   
   # CCS
   if(!"CCS" %in% names(add_args)) {
-    mcols(lipidSpectrum)$CCS <- 0
+    mcols(lipidSpectrum)$ccs <- 0
   } else {
-    mcols(lipidSpectrum)$CCS <- add_args[["CCS"]]
+    mcols(lipidSpectrum)$ccs <- add_args[["CCS"]]
   }
   
   # return spectrum
@@ -121,52 +121,55 @@ create_pos_PE <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #'
-.template_pos_PE_MH <- function() {
+.template_neg_HexCer_MH <- function() {
   
   template <- list(
-    "adduct_mass" = 10,
-    "adduct_mass - pe_mass" = 999,
-    "sn1_mass - rcdk::get.formula('OH', charge = -1)@mass" = 50,
-    "sn2_mass - rcdk::get.formula('OH', charge = -1)@mass" = 50,
-    "adduct_mass - pe_mass - sn1_mass + water_mass" = 20,
-    "adduct_mass - pe_mass - sn2_mass + water_mass" = 20
+    
   )
-
+  
   # return template
   return(template)
-  
 }
 
 
 #'
 #'
 #'
-.template_pos_PE_MNa <- function() {
+.template_neg_HexCer_MFAH <- function() {
   
   template <- list(
-    "adduct_mass" = 10,
-    "adduct_mass - rcdk::get.formula('C2H5N')@mass" = 20,
-    "adduct_mass - pe_mass" = 500,
-    "adduct_mass - pe_mass - sodium_ion_mass + proton_mass" = 300,
-    "adduct_mass - rcdk::get.formula('C2H5N')@mass - sn1_mass" = 50,
-    "adduct_mass - rcdk::get.formula('C2H5N')@mass - sn2_mass" = 50,
-    "pe_mass + sodium_ion_mass" = 999 
+    "adduct_mass" = 5,
+    "adduct_mass - rcdk::get.formula('CH2O2')@mass" = 600,
+    "adduct_mass - rcdk::get.formula('CH2O2')@mass - hexose_mass" = 999
   )
   
   # return template
   return(template)
-  
 }
+
+#'
+#'
+#'
+.template_neg_HexCer_MHAcH <- function() {
+  
+  template <- list(
+    
+  )
+  
+  # return template
+  return(template)
+}
+
 
 #'
 #'
 #' @export
-buildingblocks_pos_PE <- function() {
+buildingblocks_neg_Cer <- function() {
   
-  building_blocks <- c("adduct_mass", "gpe_mass", "pe_mass",
-                       "water_mass", "ethanolamine_mass", "proton_mass",
-                       "sodium_ion_mass","sn1_mass", "sn2_mass")
+  building_blocks <- c("adduct_mass", "sphingoid_mass", "acyl_mass",
+                       "hexose_mass", "proton_mass")
   
   # return values
   return(building_blocks)
 }
+

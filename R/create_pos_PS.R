@@ -29,8 +29,8 @@ create_pos_PS <- function(lipid_info, adduct, template = NA, ...) {
   ps_mass <- lipidomicsUtils:::ps_mass
   water_mass <- lipidomicsUtils:::water_mass
   serine_mass <- lipidomicsUtils:::serine_mass
-  proton_mass <- rcdk::get.formula("H", charge = 1)@mass
-  sodium_ion_mass <- rcdk::get.formula("Na", charge = 1)@mass
+  proton_mass <- lipidomicsUtils:::proton_mass
+  sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
   
   ## get fatty acids -----------------------------------------------------------
   fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)
