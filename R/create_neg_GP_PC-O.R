@@ -1,22 +1,22 @@
-#' Generation of Cer MS2 spectrum
-#'
+#' Generation of fragmentation spectra for PC [M+FA-H]-
+#' 
 #' @import MSnbase
 #' @import S4Vectors
 #'
 #' @export
-create_pos_Cer <- function(lipid_info, adduct, template = NA, ...) {
+create_neg_PCO <- function(lipid_info, adduct, template = NA, ...) {
   
   ## some sanity checks here ---------------------------------------------------
   # TODO add checks for correct lipid class here
-  if(!adduct %in% c("[M+H]+", "[M+Na]+")) {
+  if(!adduct %in% c("[M+FA-H]-", "[M+HAc-H]-")) {
     stop("unsupported adduct")
   }
   
   ## check if template file is supplied, other wise use hard coded template ----
-  if(is.na(template) & adduct == "[M+H]+") {
-    template <- .template_pos_Cer_MH()
-  } else if(is.na(template) & adduct == "[M+Na]+") {
-    template <- .template_pos_Cer_MNa()
+  if(is.na(template) & adduct == "[M+FA-H]-") {
+    template <- .template_neg_PCO_MFAH()
+  } else if(is.na(template) & adduct == "[M+HAc-H]-") {
+    template <- .template_neg_PCO_MHAcH()
   }
   
   ## get lipid information------------------------------------------------------
@@ -25,17 +25,20 @@ create_pos_Cer <- function(lipid_info, adduct, template = NA, ...) {
   chemFormula <- lipid_info$chemFormula
   
   ## get masses for calculation ------------------------------------------------
+  gpc_mass <- lipidomicsUtils:::gpc_mass
+  pc_mass <- lipidomicsUtils:::pc_mass
   water_mass <- lipidomicsUtils:::water_mass
+  choline_mass <- lipidomicsUtils:::choline_mass
   proton_mass <- lipidomicsUtils:::proton_mass
-  sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
   
-  ## get fatty acids and calculate mass ----------------------------------------
-  fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)
-  acyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
-  
-  # get sphingoid base ---------------------------------------------------------
-  sphingoidBase <- lipidomicsUtils::isolate_sphingoid_base(lipid)
-  sphingoid_mass <- lipidomicsUtils::calc_sphingoid_mass(sphingoidBase)
+  # calculate masses of different fatty acids ----------------------------------
+  if(stringr::str_detect(fattyAcids[1], "^O-")) {
+    alkyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
+    acyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[2])
+  } else {
+    alkyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[2])
+    acyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
+  }
   
   # calculate mass of intact PC ------------------------------------------------
   lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
@@ -90,7 +93,7 @@ create_pos_Cer <- function(lipid_info, adduct, template = NA, ...) {
   mcols(lipidSpectrum)$instrument <- "prediction"
   mcols(lipidSpectrum)$instrumentType <- "prediction"
   mcols(lipidSpectrum)$msType <- "MS2"
-  mcols(lipidSpectrum)$ionMode <- "POSITIVE"
+  mcols(lipidSpectrum)$ionMode <- "NEGATIVE"
   mcols(lipidSpectrum)$precursorMz <- adduct_mass
   mcols(lipidSpectrum)$precursorType <- adduct
   mcols(lipidSpectrum)$splash <- splash
@@ -116,47 +119,45 @@ create_pos_Cer <- function(lipid_info, adduct, template = NA, ...) {
   
 }
 
+
 #'
 #'
 #'
-.template_pos_Cer_MH <- function() {
+.template_neg_PCO_MFAH <- function() {
   
   template <- list(
-    "adduct_mass" = 5,
-    "sphingoid_mass + proton_mass - 2 * water_mass" = 999,
-    "sphingoid_mass + proton_mass - water_mass" = 250
 
   )
   
   # return template
   return(template)
-  
 }
 
+
+
 #'
 #'
 #'
-.template_pos_Cer_MNa <- function() {
+.template_neg_PCO_MHAcH <- function() {
   
   template <- list(
-    "adduct_mass" = 999,
-    "adduct_mass - water_mass" = 10
 
   )
   
   # return template
   return(template)
-  
 }
 
 #'
 #'
 #' @export
-buildingblocks_pos_Cer<- function() {
+buildingblocks_neg_PCO <- function() {
   
-  building_blocks <- c("adduct_mass", "sphingoid_mass", "acyl_mass",
-                       "proton_mass", "sodium_ion_mass")
+  building_blocks <- c("adduct_mass", "gpc_mass", "pc_mass",
+                       "water_mass", "choline_mass", "proton_mass",
+                       "alkyl_mass", "acyl_mass")
   
   # return values
   return(building_blocks)
 }
+
