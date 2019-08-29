@@ -1,9 +1,0 @@
-#PS negative ion mode template [M-H]-
-precursor=500
-precursorSerineLoss=600
-sn1Loss=100
-sn1LossH2O=100
-sn2Loss=100
-sn2LossH2O=100
-sn1=999
-sn2=999
