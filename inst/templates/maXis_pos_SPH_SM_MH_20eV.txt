@@ -1,0 +1,2 @@
+adduct_mass->999
+pc_mass + proton_mass->680

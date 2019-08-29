@@ -1,0 +1,4 @@
+adduct_mass - water_mass->999
+adduct_mass - hexose_mass + water_mass->100
+adduct_mass - hexose_mass->620
+sphingoid_mass + proton_mass - 2 * water_mass->50

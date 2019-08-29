@@ -1,0 +1,5 @@
+adduct_mass->180
+adduct_mass - rcdk::get.formula('C3H9N')@mass->853
+adduct_mass - pc_mass->999
+adduct_mass - pc_mass - sodium_ion_mass + proton_mass->40
+rcdk::get.formula('C2H5PO4Na', charge = 1)@mass->171

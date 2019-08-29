@@ -1,0 +1,3 @@
+adduct_mass->999
+adduct_mass - rcdk::get.formula('C3H9N')@mass->50
+adduct_mass - pc_mass->10

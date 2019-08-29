@@ -1,0 +1,4 @@
+adduct_mass->999
+adduct_mass - rcdk::get.formula('C3H9N')@mass->30
+adduct_mass - pc_mass->10
+adduct_mass - pc_mass - sodium_ion_mass + proton_mass->10

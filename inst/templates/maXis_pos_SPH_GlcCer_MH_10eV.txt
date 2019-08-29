@@ -1,0 +1,4 @@
+adduct_mass->999
+adduct_mass - water_mass->470
+adduct_mass - hexose_mass + water_mass->115
+adduct_mass - hexose_mass->90

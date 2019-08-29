@@ -1,0 +1,3 @@
+adduct_mass - pg_mass->999
+adduct_mass - pg_mass - sn1_mass + water_mass->15
+adduct_mass - pg_mass - sn2_mass + water_mass->15

@@ -1,0 +1,3 @@
+adduct_mass->999
+adduct_mass - rcdk::get.formula('C2H5N')@mass->20
+pe_mass + sodium_ion_mass->45

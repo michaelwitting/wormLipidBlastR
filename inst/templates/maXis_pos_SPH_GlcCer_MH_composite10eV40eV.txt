@@ -1,0 +1,7 @@
+adduct_mass->800
+adduct_mass - water_mass->300
+adduct_mass - hexose_mass + water_mass->50
+adduct_mass - hexose_mass->50
+sphingoid_mass + proton_mass - water_mass->122
+sphingoid_mass + proton_mass - 2 * water_mass->999
+sphingoid_mass + proton_mass - rcdk::get.formula('CH2O')@mass - water_mass->100
