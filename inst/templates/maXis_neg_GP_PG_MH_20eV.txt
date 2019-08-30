@@ -1,0 +1,3 @@
+adduct_mass->999
+sn1_mass - proton_mass->10
+sn2_mass - proton_mass->10
