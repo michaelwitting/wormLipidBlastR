@@ -1,7 +1,8 @@
-#' Generation of PC [M+H]+ MS2 spectrum
+#' Generation of PA [M+H]+ MS2 spectrum
 #'
-#' @import MSnbase
-#' @import S4Vectors
+#' @importFrom S4Vectors DataFrame
+#' @importFrom IRanges NumericList
+#' @import Spectra
 #'
 #' @export
 create_pos_PA <- function(lipid_info, adduct, template = NA, ...) {
@@ -47,9 +48,12 @@ create_pos_PA <- function(lipid_info, adduct, template = NA, ...) {
   
   # generate MS2 spectrum ------------------------------------------------------
   mz <- unlist(lapply(names(template), function(x) {eval(parse(text = x))}))
-  
-  # get intensity values
   int <- unlist(lapply(unname(template), function(x) {eval(parse(text = x))}))
+  
+  spec <- DataFrame(mz = mz,
+                    int = int)
+  
+  spec <- spec[order(mz),]
   
   # generate splash ------------------------------------------------------------
   splash <- splashR::getSplash(cbind(mz = mz,
@@ -58,63 +62,51 @@ create_pos_PA <- function(lipid_info, adduct, template = NA, ...) {
   # check additional arguments
   add_args <- list(...)
   
-  # collision energiy
+  # collision energy
   if(!"collisionEnergy" %in% names(add_args)) {
     collisionEnergy <- 40
   } else {
     collisionEnergy <- add_args[["collisionEnergy"]]
   }
   
-  # create MS2 spectrum
-  ms2Spec <- new(
-    "Spectrum2",
-    merged = 0,
-    precScanNum = as.integer(1),
-    precursorMz = adduct_mass,
-    precursorIntensity = 100,
-    precursorCharge = as.integer(1),
-    mz = mz,
-    intensity = int,
-    collisionEnergy = collisionEnergy,
-    centroided = TRUE
-  )
-  
-  # create spectra object for return
-  lipidSpectrum <- Spectra(ms2Spec)
-  
-  # fill basic metadata
-  mcols(lipidSpectrum)$id <- id
-  mcols(lipidSpectrum)$name <- lipid
-  mcols(lipidSpectrum)$formula <- chemFormula
-  mcols(lipidSpectrum)$exactMass <- lipid_mass
-  mcols(lipidSpectrum)$smiles <- NA
-  mcols(lipidSpectrum)$inchi <- NA
-  mcols(lipidSpectrum)$instrument <- "prediction"
-  mcols(lipidSpectrum)$instrumentType <- "prediction"
-  mcols(lipidSpectrum)$msType <- "MS2"
-  mcols(lipidSpectrum)$ionMode <- "POSITIVE"
-  mcols(lipidSpectrum)$precursorMz <- adduct_mass
-  mcols(lipidSpectrum)$precursorType <- adduct
-  mcols(lipidSpectrum)$splash <- splash
-  mcols(lipidSpectrum)$numPeak <- peaksCount(ms2Spec)
-  
   # additional metadata supplied via ...
   # RT
   if(!"RT" %in% names(add_args)) {
-    mcols(lipidSpectrum)$RT <- 0
+    rtime <- 0
   } else {
-    mcols(lipidSpectrum)$RT <- add_args[["RT"]]
+    rtime <- as.numeric(add_args[["RT"]])
   }
   
   # CCS
   if(!"CCS" %in% names(add_args)) {
-    mcols(lipidSpectrum)$CCS <- 0
+    ccs <- 0
   } else {
-    mcols(lipidSpectrum)$CCS <- add_args[["CCS"]]
+    ccs <- as.numeric(add_args[["CCS"]])
   }
   
-  # return spectrum
-  return(lipidSpectrum)
+  spd <- DataFrame(
+    msLevel = 2L,
+    precursorMz = adduct_mass,
+    rtime = rtime,
+    accession = id,
+    name = lipid,
+    exactmass = lipid_mass,
+    formula = chemFormula,
+    smiles = NA,
+    inchi = NA,
+    instrument = "prediction",
+    instrument_type = "prediction",
+    ms_ms_type = "MS2",
+    polarity = 1L,
+    adduct = adduct,
+    splash = splash,
+    pknum = length(mz)
+  )
+  
+  spd$mz <- IRanges::NumericList(spec$mz)
+  spd$intensity <- IRanges::NumericList(spec$int)
+  
+  Spectra(spd)
   
 }
 

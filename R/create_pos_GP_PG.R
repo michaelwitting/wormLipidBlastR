@@ -1,23 +1,23 @@
-#' Generation of TG [M+Na]+ or [M+NH4]+ MS2 spectrum
+#' Generation of PC [M+H]+ MS2 spectrum
 #'
 #' @importFrom S4Vectors DataFrame
 #' @importFrom IRanges NumericList
 #' @import Spectra
 #'
 #' @export
-create_pos_TG <- function(lipid_info, adduct, template = NA, ...) {
+create_pos_PG <- function(lipid_info, adduct, template = NA, ...) {
   
   ## some sanity checks here ---------------------------------------------------
   # TODO add checks for correct lipid class here
-  if(!adduct %in% c("[M+Na]+", "[M+NH4]+")) {
+  if(!adduct %in% c("[M+H]+", "[M+Na]+")) {
     stop("unsupported adduct")
   }
   
   ## check if template file is supplied, other wise use hard coded template ----
-  if(is.na(template) & adduct == "[M+Na]+") {
-    template <- .template_pos_TG_MNa()
-  } else if(is.na(template) & adduct == "[M+NH4]+") {
-    template <- .template_pos_TG_MNH4()
+  if(is.na(template) & adduct == "[M+H]+") {
+    template <- .template_pos_PG_MH()
+  } else if(is.na(template) & adduct == "[M+Na]+") {
+    template <- .template_pos_PG_MNa()
   }
   
   ## get lipid information------------------------------------------------------
@@ -26,8 +26,10 @@ create_pos_TG <- function(lipid_info, adduct, template = NA, ...) {
   chemFormula <- lipid_info$chemFormula
   
   ## get masses for calculation ------------------------------------------------
-  glycerol_mass <- lipidomicsUtils:::glycerol_mass
+  gpg_mass <- lipidomicsUtils:::gpg_mass
+  pg_mass <- lipidomicsUtils:::pg_mass
   water_mass <- lipidomicsUtils:::water_mass
+  glycerol_mass <- lipidomicsUtils:::glycerol_mass
   proton_mass <- lipidomicsUtils:::proton_mass
   sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
   
@@ -37,9 +39,8 @@ create_pos_TG <- function(lipid_info, adduct, template = NA, ...) {
   # calculate masses of different fatty acids ----------------------------------
   sn1_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
   sn2_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[2])
-  sn3_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[3])
   
-  # calculate mass of intact PC ------------------------------------------------
+  # calculate mass of intact PE ------------------------------------------------
   lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
   
   # calculate adduct mass ------------------------------------------------------
@@ -109,14 +110,16 @@ create_pos_TG <- function(lipid_info, adduct, template = NA, ...) {
   
 }
 
-
 #'
 #'
 #'
-.template_pos_TG_MNa <- function() {
+.template_pos_PG_MH <- function() {
   
   template <- list(
-
+    "adduct_mass" = 10,
+    "adduct_mass - pg_mass" = 999,
+    "sn1_mass - rcdk::get.formula('OH', charge = -1)@mass" = 15,
+    "sn2_mass - rcdk::get.formula('OH', charge = -1)@mass" = 15
   )
   
   # return template
@@ -124,24 +127,18 @@ create_pos_TG <- function(lipid_info, adduct, template = NA, ...) {
   
 }
 
+
 #'
 #'
 #'
-.template_pos_TG_MNH4 <- function() {
+.template_pos_PG_MNa <- function() {
   
   template <- list(
-    "adduct_mass" = 999,
-    "adduct_mass - rcdk::get.formula('NH3')@mass" = 100,
-    "adduct_mass - sn1_mass - rcdk::get.formula('NH3')@mass" = 900,
-    "adduct_mass - sn2_mass - rcdk::get.formula('NH3')@mass" = 500,
-    "adduct_mass - sn3_mass - rcdk::get.formula('NH3')@mass" = 900,
-    "adduct_mass - sn1_mass - sn2_mass - rcdk::get.formula('NH3')@mass" = 10,
-    "adduct_mass - sn1_mass - sn3_mass - rcdk::get.formula('NH3')@mass" = 10,
-    "adduct_mass - sn1_mass - sn2_mass - rcdk::get.formula('NH3')@mass" = 10,
-    "adduct_mass - sn2_mass - sn3_mass - rcdk::get.formula('NH3')@mass" = 10,
-    "sn1_mass - rcdk::get.formula('OH', charge = -1)@mass" = 10,
-    "sn2_mass - rcdk::get.formula('OH', charge = -1)@mass" = 10,
-    "sn3_mass - rcdk::get.formula('OH', charge = -1)@mass" = 10
+    "adduct_mass" = 100,
+    "adduct_mass - pg_mass" = 50,
+    "adduct_mass - pg_mass - sodium_ion_mass + proton_mass" = 150,
+    "pg_mass + sodium_ion_mass" = 999
+ 
   )
   
   # return template
@@ -152,11 +149,11 @@ create_pos_TG <- function(lipid_info, adduct, template = NA, ...) {
 #'
 #'
 #' @export
-buildingblocks_pos_TG <- function() {
+buildingblocks_pos_PE <- function() {
   
-  building_blocks <- c("adduct_mass", "glycerol_mass", "water_mass",
-                       "proton_mass", "sodium_ion_mass","sn1_mass", "sn2_mass",
-                       "sn3_mass")
+  building_blocks <- c("adduct_mass", "gpg_mass", "pg_mass",
+                       "water_mass", "glycerol_mass", "proton_mass",
+                       "sodium_ion_mass","sn1_mass", "sn2_mass")
   
   # return values
   return(building_blocks)
