@@ -1,0 +1,3 @@
+adduct_mass->999
+adduct_mass - pg_mass->10
+adduct_mass - pg_mass - sodium_ion_mass + proton_mass->70

@@ -1,0 +1,2 @@
+adduct_mass->500
+adduct_mass - pe_mass->999

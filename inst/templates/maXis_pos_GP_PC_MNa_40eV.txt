@@ -1,0 +1,14 @@
+adduct_mass->300
+adduct_mass - rcdk::get.formula('C3H9N')@mass->500
+adduct_mass - pc_mass->700
+adduct_mass - pc_mass - sodium_ion_mass + proton_mass->250
+adduct_mass - sn1_mass - sodium_ion_mass + proton_mass->30
+adduct_mass - sn2_mass - sodium_ion_mass + proton_mass->30
+adduct_mass - sn1_mass->15
+adduct_mass - sn2_mass->15
+adduct_mass - rcdk::get.formula('C3H9N')@mass - sn1_mass->30
+adduct_mass - rcdk::get.formula('C3H9N')@mass - sn2_mass->30
+sn1_mass - rcdk::get.formula('OH', charge = -1)@mass->15
+sn2_mass - rcdk::get.formula('OH', charge = -1)@mass->15
+rcdk::get.formula('C5H15NO4P', charge = 1)@mass->15
+rcdk::get.formula('C2H5PO4Na', charge = 1)@mass->999

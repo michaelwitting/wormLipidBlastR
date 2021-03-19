@@ -1,17 +1,37 @@
 Package: wormLipidBlastR
-Title: What The Package Does (one line, title case required)
-Version: 0.1
-Authors@R: person("First", "Last", email = "first.last@example.com",
-                  role = c("aut", "cre"))
-Description: What the package does (one paragraph)
-Depends: R (>= 3.1.0)
+Title: Prediction of lipid MS2
+Version: 0.2.0
+Authors@R: 
+    c(person(given = "Michael", family = "Witting",
+             role = c("aut", "cre"),
+             email = "michael.witting@helmholtz-muenchen.de",
+             comment = c(ORCID = "0000-0002-1462-4426")))
+Description: Generation of lipid MS2 spectra based on measured templates.
+Depends:
+    R (>= 3.5.0),
+    Spectra (>= 0.99.1),
+    MetaboCoreUtils
 Imports:
-  MSnbase,
-  masstrixR
-License: What license is it under?
-LazyData: true
-RoxygenNote: 6.1.1
-Suggests: 
-    knitr,
+    BiocParallel,
+    S4Vectors,
+    IRanges,
+    methods   
+Suggests:
+    testthat,
+    knitr (>= 1.1.0),
+    roxygen2,
+    BiocStyle (>= 2.5.19),
     rmarkdown
+Remotes:
+   RforMassSpectrometry/Spectra,
+   RforMassSpectrometry/MsCoreUtils,
+   RforMassSpectrometry/MetaboCoreUtils
+License: Artistic-2.0
+LazyData: yes
+Encoding: UTF-8
 VignetteBuilder: knitr
+BugReports: https://github.com/michaelwitting/wormLipidBlastR/issues
+URL: https://github.com/michaelwitting/wormLipidBlastR
+biocViews: Infrastructure, MassSpectrometry, Metabolomics
+Roxygen: list(markdown=TRUE)
+RoxygenNote: 7.1.1

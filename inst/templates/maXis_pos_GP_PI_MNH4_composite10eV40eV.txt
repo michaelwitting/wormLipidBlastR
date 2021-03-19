@@ -1,0 +1,6 @@
+adduct_mass->300
+adduct_mass - pi_mass - rcdk::get.formula('NH3')@mass->999
+adduct_mass - pi_mass - sn1_mass + water_mass - rcdk::get.formula('NH3')@mass->200
+adduct_mass - pi_mass - sn2_mass + water_mass - rcdk::get.formula('NH3')@mass->200
+sn1_mass - rcdk::get.formula('OH', charge = -1)@mass->20
+sn2_mass - rcdk::get.formula('OH', charge = -1)@mass->20

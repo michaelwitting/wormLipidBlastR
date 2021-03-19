@@ -1,8 +1,0 @@
-#Cer positive ion mode template [M+H]+
-precursor=250
-precursorH2OLoss=700
-precursor2H2OLoss=10
-precursorH2OFormLoss=10
-sphingoidH2OLoss=250
-sphingoid2H2OLoss=999
-sphingoidH2OFormLoss=50

@@ -1,0 +1,2 @@
+adduct_mass->999
+adduct_mass - rcdk::get.formula('C2H4O2')@mass->350

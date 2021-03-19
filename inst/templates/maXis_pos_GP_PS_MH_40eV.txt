@@ -1,0 +1,3 @@
+adduct_mass - ps_mass->999
+sn1_mass - rcdk::get.formula('OH', charge = -1)@mass->15
+sn2_mass - rcdk::get.formula('OH', charge = -1)@mass->15

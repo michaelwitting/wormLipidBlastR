@@ -1,0 +1,7 @@
+adduct_mass->800
+adduct_mass - rcdk::get.formula('C2H5N')@mass->20
+adduct_mass - pe_mass->500
+adduct_mass - pe_mass - sodium_ion_mass + proton_mass->300
+adduct_mass - rcdk::get.formula('C2H5N')@mass - sn1_mass->50
+adduct_mass - rcdk::get.formula('C2H5N')@mass - sn2_mass->50
+pe_mass + sodium_ion_mass->999

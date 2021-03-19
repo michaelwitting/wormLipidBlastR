@@ -1,0 +1,7 @@
+adduct_mass->400
+adduct_mass - sn1_mass + water_mass->50
+adduct_mass - sn2_mass + water_mass->50
+adduct_mass - sn1_mass->10
+adduct_mass - sn2_mass->10
+sn1_mass - proton_mass->999
+sn2_mass - proton_mass->999

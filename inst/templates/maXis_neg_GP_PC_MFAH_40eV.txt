@@ -1,0 +1,8 @@
+adduct_mass->10
+adduct_mass - rcdk::get.formula('C2H4O2')@mass->870
+adduct_mass - sn1_mass + water_mass - rcdk::get.formula('C2H4O2')@mass->150
+adduct_mass - sn2_mass + water_mass - rcdk::get.formula('C2H4O2')@mass->150
+adduct_mass - sn1_mass - rcdk::get.formula('C2H4O2')@mass->10
+adduct_mass - sn2_mass - rcdk::get.formula('C2H4O2')@mass->10
+sn1_mass - proton_mass->999
+sn2_mass - proton_mass->999
