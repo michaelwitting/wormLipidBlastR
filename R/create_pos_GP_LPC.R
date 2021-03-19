@@ -34,7 +34,7 @@ create_pos_LPC <- function(lipid_info, adduct, template = NA, ...) {
   sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
   
   ## get fatty acids -----------------------------------------------------------
-  fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)
+  fattyAcids <- unlist(lipidomicsUtils::isolate_radyls(lipid))
   
   # calculate masses of different fatty acids ----------------------------------
   if(fattyAcids[1] == "0:0") {
@@ -43,14 +43,14 @@ create_pos_LPC <- function(lipid_info, adduct, template = NA, ...) {
     acyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[2])
   }
 
-  # calculate mass of intact PC ------------------------------------------------
-  lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
+  # calculate mass of intact PE ------------------------------------------------
+  lipid_mass <- unlist(lipidomicsUtils::calc_lipid_mass(lipid))
   
   # calculate adduct mass ------------------------------------------------------
-  adduct_mass <- lipidomicsUtils::calc_adduct_mass(lipid_mass, adduct)
+  adduct_mass <- as.numeric(MetaboCoreUtils::mass2mz(lipid_mass, adduct))
   
   # generate MS2 spectrum ------------------------------------------------------
-  mz <- unlist(lapply(names(template), function(x) {eval(parse(text = x))}))
+  mz <- unname(unlist(lapply(names(template), function(x) {eval(parse(text = x))})))
   int <- unlist(lapply(unname(template), function(x) {eval(parse(text = x))}))
   
   spec <- DataFrame(mz = mz,

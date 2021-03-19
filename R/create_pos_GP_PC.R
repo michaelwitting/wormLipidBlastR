@@ -14,9 +14,9 @@ create_pos_PC <- function(lipid_info, adduct, template = NA, ...) {
   }
   
   ## check if template file is supplied, other wise use hard coded template ----
-  if(is.na(template) & adduct == "[M+H]+") {
+  if(is.na(template) && adduct == "[M+H]+") {
     template <- .template_pos_PC_MH()
-  } else if(is.na(template) & adduct == "[M+Na]+") {
+  } else if(is.na(template) && adduct == "[M+Na]+") {
     template <- .template_pos_PC_MNa()
   }
   
@@ -34,20 +34,20 @@ create_pos_PC <- function(lipid_info, adduct, template = NA, ...) {
   sodium_ion_mass <- lipidomicsUtils:::sodium_ion_mass
   
   ## get fatty acids -----------------------------------------------------------
-  fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)
+  fattyAcids <- unlist(lipidomicsUtils::isolate_radyls(lipid))
   
   # calculate masses of different fatty acids ----------------------------------
   sn1_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
   sn2_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[2])
-
-  # calculate mass of intact PC ------------------------------------------------
-  lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
+  
+  # calculate mass of intact PE ------------------------------------------------
+  lipid_mass <- unlist(lipidomicsUtils::calc_lipid_mass(lipid))
   
   # calculate adduct mass ------------------------------------------------------
-  adduct_mass <- lipidomicsUtils::calc_adduct_mass(lipid_mass, adduct)
+  adduct_mass <- as.numeric(MetaboCoreUtils::mass2mz(lipid_mass, adduct))
   
   # generate MS2 spectrum ------------------------------------------------------
-  mz <- unlist(lapply(names(template), function(x) {eval(parse(text = x))}))
+  mz <- unname(unlist(lapply(names(template), function(x) {eval(parse(text = x))})))
   int <- unlist(lapply(unname(template), function(x) {eval(parse(text = x))}))
   
   spec <- DataFrame(mz = mz,
@@ -137,15 +137,15 @@ create_pos_PC <- function(lipid_info, adduct, template = NA, ...) {
     "adduct_mass - pc_mass" = 700,
     "adduct_mass - sn1_mass - sodium_ion_mass + proton_mass" = 30,
     "adduct_mass - sn2_mass - sodium_ion_mass + proton_mass" = 30,
-    "adduct_mass - sn1_mass" = 15,
-    "adduct_mass - sn2_mass" = 15,
+    "adduct_mass - sn1_mass" = 16,
+    "adduct_mass - sn2_mass" = 17,
     "adduct_mass - rcdk::get.formula('C3H9N')@mass - sn1_mass" = 30,
     "adduct_mass - rcdk::get.formula('C3H9N')@mass - sn2_mass" = 30,
-    "sn1_mass - rcdk::get.formula('OH', charge = -1)@mass" = 15,
-    "sn2_mass - rcdk::get.formula('OH', charge = -1)@mass" = 15,
-    "rcdk::get.formula('C5H15NO4P', charge = 1)@mass" = 15,
+    "sn1_mass - rcdk::get.formula('OH', charge = -1)@mass" = 18,
+    "sn2_mass - rcdk::get.formula('OH', charge = -1)@mass" = 19,
+    "rcdk::get.formula('C5H15NO4P', charge = 1)@mass" = 20,
     "rcdk::get.formula('C2H5PO4Na', charge = 1)@mass" = 999
-    )
+  )
   
   # return template
   return(template)

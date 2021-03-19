@@ -32,21 +32,21 @@ create_neg_Cer <- function(lipid_info, adduct, template = NA, ...) {
   proton_mass <- lipidomicsUtils:::proton_mass
   
   ## get fatty acids and calculate mass ----------------------------------------
-  fattyAcids <- lipidomicsUtils::isolate_fatty_acyls(lipid)
+  fattyAcids <- unlist(lipidomicsUtils::isolate_radyls(lipid))
   acyl_mass <- lipidomicsUtils::calc_intact_acyl_mass(fattyAcids[1])
   
   # get sphingoid base ---------------------------------------------------------
   sphingoidBase <- lipidomicsUtils::isolate_sphingoid_base(lipid)
   sphingoid_mass <- lipidomicsUtils::calc_sphingoid_mass(sphingoidBase)
   
-  # calculate mass of intact PC ------------------------------------------------
-  lipid_mass <- lipidomicsUtils::calc_lipid_mass(lipid)
+  # calculate mass of intact PE ------------------------------------------------
+  lipid_mass <- unlist(lipidomicsUtils::calc_lipid_mass(lipid))
   
   # calculate adduct mass ------------------------------------------------------
-  adduct_mass <- lipidomicsUtils::calc_adduct_mass(lipid_mass, adduct)
+  adduct_mass <- as.numeric(MetaboCoreUtils::mass2mz(lipid_mass, adduct))
   
   # generate MS2 spectrum ------------------------------------------------------
-  mz <- unlist(lapply(names(template), function(x) {eval(parse(text = x))}))
+  mz <- unname(unlist(lapply(names(template), function(x) {eval(parse(text = x))})))
   int <- unlist(lapply(unname(template), function(x) {eval(parse(text = x))}))
   
   spec <- DataFrame(mz = mz,
